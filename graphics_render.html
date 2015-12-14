@@ -2,23 +2,23 @@
 <html>
    <head>
       <title>SME Graphics Template</title>
-      <script type="text/javascript" src="lib/jquery-2.1.4.js"></script>
+      <script type="text/javascript" src="public/vendor/jquery-2.1.4.js"></script>
       <script type="text/javascript" src="graphics.js"></script>
       <style type="text/css">
          @import "graphics.css";
-         @import "lib/animate.css";
+         @import "public/vendor/animate.css";
       </style>
    </head>
    <body>
-      <div id="clock">11:15</div>
-      <div id="lower-third">
-         <h1>Persons Name</h1>
-         <p id="subtitle">This person does a whole bunch of things in a variety of ways.</p>
+      <div id="clock" class="hide">11:15</div>
+      <div id="lowerThird" class="hide">
+         <h1 id="name">Persons Name</h1>
+         <p><span id="function">CEO</span> / <span id="company">Porro van der Veen Filmproducties</span></p>
       </div>
       
-      <div id="sponsormessage" class="animated flipOutX">
+      <div id="sponsormessage" class="animated flipOutX hide">
          <h1>Event streaming provided by:</h1>
       </div>
-      <div id="logo" class="animated flipOutX"><img src="img/sme_logo.png" /></div>
+      <div id="logo" class="animated flipOutX hide"><img src="public/img/sme_logo.png" /></div>
    </body>
 </html>

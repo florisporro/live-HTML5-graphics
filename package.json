@@ -1,8 +1,28 @@
 {
-  "name": "jsonserver",
-  "description": "Super quick JSON server for graphics system",
-  "version": "0.0.1",
+  "name": "live-HTML5-graphics",
+  "version": "1.0.0",
+  "description": "CasparCG based live HTML5 graphics template",
+  "main": "graphics.js",
   "dependencies": {
-    "express": "~3.21.2"
-  }
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "cucumber": "^0.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florisporro/live-HTML5-graphics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/florisporro/live-HTML5-graphics/issues"
+  },
+  "homepage": "https://github.com/florisporro/live-HTML5-graphics#readme"
 }

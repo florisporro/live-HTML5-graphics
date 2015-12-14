@@ -7,19 +7,19 @@
 
 
 (function() {
-  var AnimatedObject, Clock, GraphicsController, clock, controller, _ref,
-    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  var Clock, GraphicsController, LowerThird,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   GraphicsController = (function() {
     function GraphicsController() {
       this.poll = __bind(this.poll, this);
       var that;
       that = this;
-      this.previousData = {};
       this.currentData = {};
-      that.poll();
+      this.poll();
+      setInterval((function() {
+        return that.poll();
+      }), 1000);
       setInterval((function() {
         return $(window).trigger('tick');
       }), 500);
@@ -28,23 +28,17 @@
     GraphicsController.prototype.poll = function() {
       var pollUrl,
         _this = this;
-      pollUrl = 'http://localhost:27015/graphics.json';
+      pollUrl = 'http://localhost:27015/data.json';
       $.ajax(pollUrl, {
         timeout: 15000,
         success: function(data) {
-          var widget, _i, _len, _ref;
           if (!data) {
             console.log("No data received");
             return;
           }
-          _this.currentData = JSON.parse(data);
-          console.log(_this.currentData);
-          _ref = _this.currentData;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            widget = _ref[_i];
-            window[widget].update(widget);
-          }
-          console.log("Data dump: " + JSON.stringify(_this.currentData));
+          _this.currentData = data;
+          clock.update(_this.currentData.clock);
+          lowerThird.update(_this.currentData.lowerThird);
         }
       });
     };
@@ -53,67 +47,70 @@
 
   })();
 
-  AnimatedObject = (function() {
-    function AnimatedObject() {
+  Clock = (function() {
+    function Clock() {
       this.update = __bind(this.update, this);
+      this.tick = __bind(this.tick, this);
       this.properties = {
-        visible: true,
-        content: {}
+        Visible: true,
+        Offset: 0
       };
-      this.animationSpeed = 500;
       $(window).bind('tick', this.tick);
     }
 
-    AnimatedObject.prototype.update = function(widget) {
-      console.log(widget);
-      if (this.properties.visible !== widget.visible) {
-        console.log("Visibility changed");
-      }
-      return console.log("Update called on " + self);
-    };
-
-    AnimatedObject.prototype.tick = function() {};
-
-    return AnimatedObject;
-
-  })();
-
-  Clock = (function(_super) {
-    __extends(Clock, _super);
-
-    function Clock() {
-      _ref = Clock.__super__.constructor.apply(this, arguments);
-      return _ref;
-    }
-
     Clock.prototype.tick = function() {
-      var currentMinutes, currentSeconds, d;
+      var currentHours, currentMinutes, currentSeconds, d;
       d = new Date();
       currentMinutes = d.getMinutes();
       currentSeconds = d.getSeconds();
+      currentHours = Number(d.getHours()) + Number(this.properties.Offset);
       if (currentMinutes.toString().length === 1) {
         currentMinutes = "0" + currentMinutes;
       }
       if (currentSeconds.toString().length === 1) {
         currentSeconds = "0" + currentSeconds;
       }
-      return $('#clock').html(d.getHours() + ':' + currentMinutes + ':' + currentSeconds);
+      return $('#clock').html(currentHours + ':' + currentMinutes + ':' + currentSeconds);
     };
 
-    Clock.prototype.hide = function() {
-      return $('#clock').fadeOut();
-    };
-
-    Clock.prototype.show = function() {
-      return $('#clock').fadeIn();
+    Clock.prototype.update = function(widget) {
+      this.properties = widget;
+      this.properties.Visible = widget.Visible === 'true' ? true : false;
+      return $('#clock').toggleClass('hide', !this.properties.Visible);
     };
 
     return Clock;
 
-  })(AnimatedObject);
+  })();
 
-  controller = new GraphicsController();
+  LowerThird = (function() {
+    function LowerThird() {
+      this.update = __bind(this.update, this);
+      this.properties = {
+        Visible: true,
+        Name: "Name goes here",
+        Title: "CEO",
+        Company: "Stream My Event"
+      };
+    }
 
-  clock = new Clock();
+    LowerThird.prototype.update = function(widget) {
+      this.properties = widget;
+      this.properties.Visible = widget.Visible === 'true' ? true : false;
+      $('#lowerThird').toggleClass('hide', !this.properties.Visible);
+      $('#lowerThird #name').text(this.properties.Name);
+      $('#lowerThird #function').text(this.properties.Title);
+      return $('#lowerThird #company').text(this.properties.Company);
+    };
+
+    return LowerThird;
+
+  })();
+
+  window.controller = new GraphicsController();
+
+  window.clock = new Clock();
+
+  window.lowerThird = new LowerThird();
 
 }).call(this);

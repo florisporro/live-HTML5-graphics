@@ -1,8 +1,9 @@
 /* BASIC SETUP */
+
 body, html {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('img/checkerboard.png');
+	background-image: url('public/img/checkerboard.png');
 	position: relative;
 }
 
@@ -12,22 +13,23 @@ body, html {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('fonts/Open_Sans/OpenSans-Regular.ttf');
+  src: url('public/fonts/Open_Sans/OpenSans-Regular.ttf');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('fonts/Open_Sans/OpenSans-Bold.ttf');
+  src: url('public/fonts/Open_Sans/OpenSans-Bold.ttf');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
-  src: url('fonts/Open_Sans/OpenSans-ExtraBold.ttf');
+  src: url('public/fonts/Open_Sans/OpenSans-ExtraBold.ttf');
 }
 
 /* CLOCK */
+
 #clock {
 	width: 150px;
 	height: 40px;
@@ -44,9 +46,66 @@ body, html {
 	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
 	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
 	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+
+	transition: opacity 5s;
 }
 
+.hide {
+	opacity: 0;
+}
+
+
+/* LOWER THIRD */
+
+#lowerThird {
+	position: absolute;
+	bottom: 7%;
+	left: 7%;
+	width: 40%;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 45px 70px;
+	border-bottom: 12px solid #FFF;
+	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+
+	transition: opacity 5s;
+}
+#lowerThird h1 {
+	font-family: 'Open Sans';
+	font-weight: 800;
+	margin: 0;
+	font-size: 48px;
+}
+#lowerThird p {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 28px;
+	margin: 0;
+}
+#lowerThird #function {
+	font-weight: 600;
+}
+#lowerThird #company {
+	font-style: italic;
+	font-weight: 200;
+}
+
+
+/* SPONSOR MESSAGE / IMAGE */
+
+#sponsormessage {
+	position: absolute;
+	top: 7%;
+	right: 7%;
+	text-align: right;
+	font-family: 'Open Sans';
+	font-weight: 800;
+}
+
+
 /* LOGO */
+
 #logo {
 	position: absolute;
 	top: 7%;
@@ -63,40 +122,4 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-}
-
-#sponsormessage {
-	position: absolute;
-	top: 7%;
-	right: 7%;
-	text-align: right;
-	font-family: 'Open Sans';
-	font-weight: 800;
-}
-
-/* LOWER THIRD */
-
-#lower-third {
-	position: absolute;
-	bottom: 7%;
-	left: 7%;
-	width: 40%;
-	background: rgba(255, 255, 255, 0.5);
-	padding: 70px;
-	border-bottom: 6px solid #FF8000;
-	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-}
-#lower-third h1 {
-	font-family: 'Open Sans';
-	font-weight: 800;
-	margin: 0;
-	font-size: 48px;
-}
-#lower-third p#subtitle {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 28px;
-	margin: 0;
 }
