@@ -5,6 +5,15 @@ var fs = require('fs');
 var express = require('express');
 var app = express();
 
+// Start the server
+var server = app.listen(27015, function () {
+	console.log("Server running on port 27015");
+});
+
+// Socket.io to push changes to render clients dynamically
+var io = require('socket.io')(server);
+io.serveClient(false);
+
 // Parsing the JSON contents
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -36,33 +45,27 @@ var data_structure = {
 // File that stores the user entered data for persistance
 var data_file = 'data.json';
 
-// Router starts here
-app.get('/data.json', function (req, res) {
-	// This allows a locally loaded file to access the data served by Node JS even when not on the same server
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header('Access-Control-Allow-Credentials', true);
-	res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
-	res.header('Access-Control-Allow-Headers', 'Content-Type');
-
-	// We always read the file from disk for persistance
-	fs.readFile(data_file, function(err, data) {
-		if (err) {
-			console.error(err);
-			process.exit(1);
-		}
-		res.header('Cache-Control', 'no-cache');
-		res.json(JSON.parse(data));
-	});
+io.on('connection', function (socket) {
+  fs.readFile(data_file, function(err, data) {
+  	if (err) {
+  		console.error(err);
+  		process.exit(1);
+  	}
+  	socket.emit('newData', JSON.parse(data));
+  });
 });
 
 // Serve the admin page with Jade
 app.get('/admin', function (req, res) {
+	// Get the current config from the file so we can pre-populate the form
 	fs.readFile(data_file, function(err, data) {
 		if (err) {
 			console.error(err);
 			process.exit(1);
 		}
+		// Send the data long to the render engine
 		res.locals.data = JSON.parse(data);
+		// Render the forms with the data structure defined above
 		res.render('admin', data_structure);
 	});
 });
@@ -74,16 +77,14 @@ app.post('/admin/set', function(req, res) {
 			console.error(err);
 			process.exit(1);
 		}
+		// Emit the new data to all connected render clients
+		io.emit('newData', req.body);
+
 		res.setHeader('Cache-Control', 'no-cache');
 		res.statusCode = 200;
 		res.redirect("/admin");
 		res.end();
 	});
-});
-
-// Start the server
-var server = app.listen(27015, function () {
-	console.log("Server running on port 27015");
 });
 
 // That's it. Probably could be much better than this but it's a pretty good start!

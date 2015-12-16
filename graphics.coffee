@@ -1,40 +1,20 @@
-###
-# Welcome to the new js2coffee 2.0, now
-# rewritten to use the esprima parser.
-# try it out!
-###
+socket = io('http://localhost:27015')
 
 class GraphicsController
   constructor: ->
-    that = this
     @currentData = {}
-
-    this.poll()
-
-    setInterval (->
-      that.poll()
-      ), 1000
 
     setInterval (->
       $(window).trigger('tick')
       ), 500
 
-  poll: =>
-    pollUrl = 'http://localhost:27015/data.json'
+    socket.on 'newData', (data) =>
+      @update(data)
 
-    $.ajax pollUrl,
-    timeout: 15000
-    success: (data) =>
-      if !data
-        console.log("No data received")
-        return
-
-      @currentData = data
-      clock.update(@currentData.clock)
-      lowerThird.update(@currentData.lowerThird)
-
-      return
-    return
+  update: (data) =>
+    @currentData = data
+    clock.update(@currentData.clock)
+    lowerThird.update(@currentData.lowerThird)
 
 class Clock
   constructor: ->
