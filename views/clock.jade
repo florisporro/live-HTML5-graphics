@@ -1,3 +1,10 @@
 extends admin_layout
 
 block widget
+	div.btn-group.btn-group-lg.btn-block
+		button(href="/admin/clock/show").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Show
+		button(href="/admin/clock/hide").btn.btn-danger
+			i.glyphicon.glyphicon-eye-close
+			|  Hide

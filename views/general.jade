@@ -1,7 +1,7 @@
 extends admin_layout
 
 block widget
-	form(action='/admin/set/general', method='post')
+	form(action='/admin/general/set', method='post')
 		fieldset(name="color1")
 			label.control-label Primary Color
 			input.form-control(name="color1", value=config.general.color1)
