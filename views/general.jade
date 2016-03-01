@@ -1,0 +1,42 @@
+extends admin_layout
+
+block widget
+	form(action='/admin/set/general', method='post')
+		fieldset(name="color1")
+			label.control-label Primary Color
+			input.form-control(name="color1", value=config.general.color1)
+		fieldset(name="color2")
+			label.control-label Secondary Color
+			input.form-control(name="color2", value=config.general.color2)
+		fieldset(name="color3")
+			label.control-label Tertiary Color
+			input.form-control(name="color3", value=config.general.color3)
+
+		+select('general', 'transparent_elements', 'Transparent Elements', config.general.transparent_elements,
+			{
+				"true" : { "name" : "On", "value" : "true" },
+			 	"false" : { "name" : "Off", "value" : "false" }
+			})
+
+		+select('general', 'fonts', 'Font set', config.general.fonts,
+			{
+				"modern" : { "name" : "Modern", "value" : "modern" },
+			 	"techy" : { "name" : "Techy", "value" : "techy" },
+			 	"classical" : { "name" : "Classical", "value" : "classical" }
+			})
+
+		+select('general', 'shadows', 'Shadows', config.general.shadows,
+			{
+				"true" : { "name" : "On", "value" : "true" },
+			 	"false" : { "name" : "Off", "value" : "false" }
+			})
+
+		+select('general', 'animations', 'Animations', config.general.animations,
+			{
+				"false" : { "name" : "Off", "value" : "true" },
+			 	"slides" : { "name" : "Slides", "value" : "slides" },
+			 	"fades" : { "name" : "Fades", "value" : "fades" }
+			})
+
+		hr
+		button.btn.btn-primary(type='submit') Update

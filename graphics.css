@@ -5,6 +5,11 @@ body, html {
 	height: 1080px;
 	background-image: url('public/img/checkerboard.png');
 	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
 }
 
 /* FONTS */
@@ -28,6 +33,16 @@ body, html {
   src: url('public/fonts/Open_Sans/OpenSans-ExtraBold.ttf');
 }
 
+/* GENERIC */
+
+.hide {
+	opacity: 0;
+}
+
+.shadowed {
+	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+}
+
 /* CLOCK */
 
 #clock {
@@ -43,17 +58,12 @@ body, html {
 	font-weight: 800;
 	background: rgba(255, 255, 255, 0.5);
 
-	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+/*	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);*/
 	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
 
 	transition: opacity 5s;
 }
-
-.hide {
-	opacity: 0;
-}
-
 
 /* LOWER THIRD */
 

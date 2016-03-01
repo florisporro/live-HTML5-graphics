@@ -1,5 +1,13 @@
 socket = io('http://localhost:27015')
 
+convertHex = (hex, opacity) ->
+  hex = hex.replace('#', '')
+  r = parseInt(hex.substring(0, 2), 16)
+  g = parseInt(hex.substring(2, 4), 16)
+  b = parseInt(hex.substring(4, 6), 16)
+  result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')'
+  result
+
 class GraphicsController
   constructor: ->
     @currentData = {}
@@ -15,6 +23,8 @@ class GraphicsController
     @currentData = data
     clock.update(@currentData.clock)
     lowerThird.update(@currentData.lowerThird)
+    $('.widget').css('background', convertHex(@currentData.styling.Color1, 50))
+    $('#lowerThird').css('border-bottom-color', convertHex(@currentData.styling.Color2, 100))
 
 class Clock
   constructor: ->

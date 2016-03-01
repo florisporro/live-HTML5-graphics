@@ -1,22 +1,81 @@
+html {
+  overflow-y: scroll;
+}
+body {
+	background: #f7f9fa;
+}
 
+@-webkit-keyframes redPulse {
+  from { text-shadow: 0 0 16px #9c0000; color: #f33314; }
+  50% { text-shadow: 0 0 18px #ff0000; color: #f35136; }
+  to { text-shadow: 0 0 16px #9c0000; color: #f33314; }
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+span.redPulse {
+  -webkit-animation-name: redPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
 
+@-webkit-keyframes bluePulse {
+  from { text-shadow: 0 0 16px #007c9b; color: #15e6ff; }
+  50% { text-shadow: 0 0 18px #00ccff; color: #9cf5ff; }
+  to { text-shadow: 0 0 16px #007c9b; color: #15e6ff; }
+}
 
+@-webkit-keyframes operating {
+    0%{background-position:0% 50%; }
+    50%{background-position:100% 50%; }
+    100%{background-position:0% 50%; }
+}
 
+span.bluePulse {
+  -webkit-animation-name: bluePulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
 
+.header {
+	background: #333333;
+	border-bottom: 2px solid #FFF;
+	margin-bottom: 2em;
+	padding: 1em 0;
+	position: relative;
+}
+.header span {
+	display: inline !important;
+	transition: 1s all;
+	margin-right: 0.5em;
+}
+.header span.hidden {
+	width: 0px;
+	margin-right: 0;
+	opacity: 0;
+}
+.header h1 {
+	color: #FFF;
+}
+.header::after {
+	content: '';
+	width: 100%;
+	height: 1em;
+	position: absolute;
+	bottom: 0;
+	background-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+	background-size: 400% 400%;
+}
+.header.animated::after {
+	-webkit-animation: operating 5s ease infinite;
+}
 
+p.status {
+	font-size: 3em;
+}
 
+.footer {
+	margin-top: 3em;
+}
 
-
-
-
-
-
-
-
-
-
-
+li.recording {
+	margin-bottom: 1em;
+}

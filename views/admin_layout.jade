@@ -1,0 +1,40 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/css/main.css')
+    script(src="/socket.io/socket.io.js")
+    script(src="/vendor/jquery-2.1.4.js")
+    script(src='/js/admin.js')
+    script(src='/vendor/bootstrap.min.js')
+    //if lt IE 9
+      script.
+        window.html5 || document.write('<script src="/vendor/html5shiv.js"><\\/script>')
+    include mixins
+
+  body
+    div.container-fluid.header
+      div.container
+        div.row
+          div.col-md-12
+            h1 Graphics Generator
+            pre.pull-left v1.0.0, CPU: #{status.cpu}
+
+    div.container
+      div.row
+        .col-md-4
+          include menu
+        .col-md-8
+          h2=title
+          hr
+          block widget
+
+    div.container.footer
+      div.row.text-center
+        img(src="/img/SME_Logo_Color_small.png", width="25%")

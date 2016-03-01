@@ -1,0 +1,10 @@
+extends admin_layout
+
+block widget
+	div.btn-group.btn-group-lg.btn-block
+		button(href="/admin/broadcastMessage/&visibility=hide", method="put").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Show
+		button.btn.btn-danger
+			i.glyphicon.glyphicon-eye-close
+			|  Hide

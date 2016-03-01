@@ -1,0 +1,6 @@
+mixin select(page, name, title, selected, options)
+	fieldset(name=name)
+		label.control-label=title
+		select.form-control(name=name)
+			each option in options
+				option(value=option.value, selected=(selected === option.value ? "selected" : undefined))=option.name

@@ -1,0 +1,1266 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"time_remaining_seconds"
+			],
+			[
+				"update",
+				"updatediskpercentage"
+			],
+			[
+				"disk",
+				"diskpercentage"
+			],
+			[
+				"ger",
+				"getDiskSpaceByPercentage"
+			],
+			[
+				"get",
+				"getDiskSpaceByPercentage"
+			],
+			[
+				"lib",
+				"libx264"
+			],
+			[
+				"ffmpeg",
+				"ffmpeg_with_options"
+			],
+			[
+				"curr",
+				"currentData"
+			],
+			[
+				"widget",
+				"widget_name"
+			],
+			[
+				"data",
+				"data_structure_file"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"current",
+				"currentData"
+			],
+			[
+				"curre",
+				"currentSeconds"
+			],
+			[
+				"permalink",
+				"permalink_for_language"
+			],
+			[
+				"other",
+				"otherPageID"
+			],
+			[
+				"menu",
+				"menu_list"
+			],
+			[
+				"if",
+				"if	if …"
+			],
+			[
+				"last",
+				"lastReceivedSequence"
+			],
+			[
+				"Open",
+				"OpenSans-Bold"
+			],
+			[
+				"publish",
+				"publisheable"
+			],
+			[
+				"max",
+				"max_run_time"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"new",
+				"new_position"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"thunb",
+				"thumbnail_url"
+			],
+			[
+				"edit",
+				"edit_portfolio_path"
+			],
+			[
+				"video",
+				"video_params"
+			],
+			[
+				"old",
+				"old_image_store_dir"
+			],
+			[
+				"old_",
+				"old_portrait_store_dir"
+			],
+			[
+				"portrait",
+				"portrait_path_new"
+			],
+			[
+				"po",
+				"portfolio_id_"
+			],
+			[
+				"legacy",
+				"legacy_store_dir"
+			],
+			[
+				"Image",
+				"ImageUploader"
+			],
+			[
+				"local",
+				"local_path"
+			],
+			[
+				"image",
+				"image_iteration"
+			],
+			[
+				"por",
+				"portrait"
+			],
+			[
+				"tot",
+				"totalBytes"
+			],
+			[
+				"total",
+				"totalBytes"
+			],
+			[
+				"bytes",
+				"bytesSent"
+			],
+			[
+				"lo",
+				"loader"
+			],
+			[
+				"conta",
+				"contactdetails"
+			],
+			[
+				"def",
+				"defds	def_delegators .."
+			],
+			[
+				"rep",
+				"respond_to"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 49.0,
+		"last_filter": "add fo",
+		"selected_items":
+		[
+			[
+				"add fo",
+				"Project: Add Folder"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ss php",
+				"Set Syntax: PHP"
+			],
+			[
+				"ss ",
+				"Set Syntax: PHP"
+			],
+			[
+				"convert ",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"ss jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"ss js",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"ss actio",
+				"Set Syntax: ActionScript"
+			],
+			[
+				"ss batch",
+				"Set Syntax: Batch File"
+			],
+			[
+				"ss",
+				"Set Syntax: ActionScript"
+			],
+			[
+				"ss ss",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"ss html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ss coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"css",
+				"Set Syntax: CSS3"
+			],
+			[
+				"pro",
+				"Project: Add Folder"
+			],
+			[
+				"latest",
+				"Rails Latest Migration: Open latest Rails migration"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"html",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"background",
+				"Snippet: background"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"ss rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"ss coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics"
+	],
+	"file_history":
+	[
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/public/javascripts/streamert_client.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/routes/index.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/lib/streamert.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/views/layout.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/lib/button_integration.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/views/recordings.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/lib/io.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/app.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/views/index.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/public/stylesheets/style.css",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/bin/www",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/package.json",
+		"/Users/florisporro/Mobile Projects/Toperators/app/assets/stylesheets/typography.css.scss",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/layouts/application.html.erb",
+		"/Users/florisporro/Library/Caches/com.binarynights.ForkLift2/#0/teensy.js",
+		"/Users/florisporro/Mobile Projects/HackrBox/teensy.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/views/dev.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/config.json",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/johnnyfive.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/server.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/serialport.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/lib/ffmpeg.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/graphics.coffee",
+		"/Users/florisporro/Mobile Projects/Streaming/Scheduler 2/app/controllers/application_controller.rb",
+		"/Users/florisporro/Mobile Projects/Streaming/Scheduler 2/app/controllers/dashboard_controller.rb",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/views/admin.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/nodemon.json",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/routes/admin.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/views/set.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/views/error.jade",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/routes/users.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/streamert/app.js",
+		"/Users/florisporro/Mobile Projects/Streaming/Streamert/streamert/package.json",
+		"/Users/florisporro/Library/Caches/com.binarynights.ForkLift2/#1/.htaccess",
+		"/Users/florisporro/Library/Caches/com.binarynights.ForkLift2/#0/.htaccess",
+		"/Users/florisporro/Mobile Projects/StreamTestr/package.json",
+		"/Users/florisporro/Mobile Projects/StreamTestr/start.html",
+		"/Users/florisporro/Mobile Projects/StreamTestr/start.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/graphics.css",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/graphics_render.html",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/data.json",
+		"/Volumes/IRM_CCSA_X64FRE_EN-US_DV5/autorun.inf",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/test.html",
+		"/Volumes/Untitled 1/AUTOEXEC.BAT",
+		"/Volumes/BOOTCAMP/STREAMING/CasparCG/CasparCG Server/Server/casparcg.config",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/graphics.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/public/vendor/socket.io.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/README.md",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/package.json",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/nodemon.json",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/admin_UI.json",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/terminal.glue",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/public/graphics_render.html",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/public/css/bootstrap-theme.css",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics/admin.html",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics-react-socketio/server.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/graphics.coffee",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/live-HTML5-graphics-react-socketio/package.json",
+		"/Volumes/192.168.1.163/home/pi/test.js",
+		"/Volumes/bob/Columbus Theater/VOOR FLORIS/SETTINGS/SETTINGS/COLUMBUS_SETTINGS_MEDIA_ENCODER/FLOOR01.epr",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/server.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/graphics_render.html",
+		"/Volumes/bob/Columbus Theater/VOOR FLORIS/SETTINGS/SETTINGS/COLUMBUS_SETTINGS_MEDIA_ENCODER/WALL1.epr",
+		"/Users/florisporro/Dropbox/DOCUMENTS/Aanvraag Huurwoning 2015/Info nodig.txt",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/graphics.js",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/defaultData.json",
+		"/Users/florisporro/Mobile Projects/Toperators/app/assets/javascripts/images.js.coffee",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/package.json",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/lib/animate.css",
+		"/Users/florisporro/Mobile Projects/CasparCG Graphics/graphics.css",
+		"/Volumes/Untitled/autorun.inf",
+		"/Volumes/Untitled/setup.exe",
+		"/Users/florisporro/Downloads/index.html",
+		"/Users/florisporro/Mobile Projects/Össur/Web/V1/wp-content/themes/ossur/locator/Dataset/ossur_august2015_convert.csv",
+		"/Users/florisporro/Mobile Projects/Össur/Web/V1/wp-content/themes/ossur/locator/Dataset/coords_script.rb",
+		"/Users/florisporro/Mobile Projects/Össur/Web/V1/wp-content/themes/ossur/locator/Dataset/ossur_august2015_ingest.csv",
+		"/Users/florisporro/Mobile Projects/Össur/Web/V1/wp-content/themes/ossur/locator/Dataset/ossur_march2015_revision_4.csv",
+		"/Users/florisporro/Mobile Projects/Streaming/Scheduler/lib/tasks/worker2.rb",
+		"/Users/florisporro/Mobile Projects/Össur/Web/V1/wp-content/themes/ossur/locator/coords_script.rb",
+		"/Users/florisporro/Mobile Projects/Aviofilm/Website 2014/Web/Magnum Theme/index.html",
+		"/Users/florisporro/Mobile Projects/Toperators/Gemfile",
+		"/Users/florisporro/Mobile Projects/Toperators/app/models/tag.rb",
+		"/Users/florisporro/Downloads/stream1 (6).vlc",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/pages/landing.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/assets/javascripts/landing.js.coffee",
+		"/Users/florisporro/Mobile Projects/Toperators/public/loaderio-a6f39c361db0ec7c1e083d4ea7ae6aba.txt",
+		"/Users/florisporro/Mobile Projects/Toperators/app/models/portfolio.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/controllers/portfolios_controller.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/config/environments/production.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/README.rdoc",
+		"/Users/florisporro/Mobile Projects/Toperators/app/controllers/search_controller.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/tmp/pids/server.pid",
+		"/Users/florisporro/Mobile Projects/Toperators/db/seeds.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/config/routes.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/models/coupon.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/assets/stylesheets/variables.css.scss",
+		"/Users/florisporro/Mobile Projects/Toperators/app/models/video.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/db/migrate/20140829115815_rename_portrait_image_column.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/Toperators.sublime-project",
+		"/Users/florisporro/Mobile Projects/Toperators/app/uploaders/image_uploader.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/controllers/images_controller.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/tmp/cache/assets/development/sass/61d9477cbee67007a204e5490ada71d59de391bc/font-awesome.css.erbc",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portraits/_form.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/spec/factories.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portraits/_crop.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portfolios/_notifications.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portraits/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/config.ru",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/images/_crop.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/.ruby-version",
+		"/Users/florisporro/Mobile Projects/Toperators/tmp/data/meta_request/32bf5fde-c422-4ee8-a7b4-c69604ab4961.json",
+		"/Users/florisporro/Mobile Projects/Toperators/tmp/cache/assets/development/sass/05372ea6e4da1b233751438cc41b4e85b382e59c/_table-row.scssc",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/password_resets/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/payments/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/media/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/invitations/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/images/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/email_settings/new.js.coffee",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/contacts/new.js.coffee",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portfolios/new.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portfolios/_form.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/controllers/portraits_controller.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/uploaders/portrait_uploader.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/helpers/portraits_helper.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/models/portrait.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/controllers/sessions_controller.rb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/portfolios/_portrait.html.erb",
+		"/Users/florisporro/Mobile Projects/Toperators/app/views/users/edit.html.erb"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/Users/florisporro/Mobile Projects/Toperators"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"time_remaining_seconds",
+			"minutes",
+			"text-shadow: 0 0 16px #007c9b; color: #15e6ff;",
+			", linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%)",
+			"box",
+			"new five.Button({",
+			".off();",
+			".on();",
+			";",
+			"=",
+			"var ",
+			"=",
+			"pushbutton",
+			"var ",
+			"all",
+			" btn-block",
+			"button",
+			"a",
+			"html",
+			"exports.ffmpeg",
+			"status",
+			"ffmpeg.",
+			"status.",
+			"streamert",
+			"if ",
+			"(\" ",
+			"(\"-",
+			"\");",
+			" += ",
+			"ls",
+			"layout",
+			"type=\"button\", ",
+			"button",
+			"')",
+			"currentServer",
+			"targets[server]",
+			"server",
+			"\"",
+			"	",
+			":",
+			"sh",
+			"lower-third",
+			"response",
+			"public/",
+			",",
+			" ",
+			"         ",
+			"Bitrate",
+			"object",
+			"Object",
+			"object",
+			"properties",
+			"property",
+			"element",
+			"	define('ICL_DONT_LOAD_NAVIGATION_CSS', true);",
+			"e, ",
+			"Date()",
+			"regular",
+			"Keine",
+			"Keine Adresse",
+			"Keine",
+			"keine addresse",
+			"keine adresse",
+			"str.",
+			"Str.",
+			" ,",
+			"</li>",
+			"<li>Cameraman?</li>",
+			"session['first-time']",
+			"session[\"first-time\"]",
+			"session",
+			"heroku ",
+			" --app #{STAGING_APP}",
+			"staging",
+			"mini",
+			"rake",
+			"self",
+			"margin-bottom: 20",
+			"portfolio",
+			"video",
+			"debugger",
+			"rake",
+			"white",
+			"md-4",
+			"md-6",
+			"</li>",
+			"md-3",
+			"3",
+			"6",
+			"4",
+			"pointer",
+			"-harvest",
+			",",
+			".jpg",
+			"maxresdefault",
+			"http://img.youtube.com/vi/<insert-youtube-video-id-here>/",
+			",",
+			"div",
+			"image.",
+			"image",
+			"portrait",
+			"@portfolio",
+			"@",
+			"sleep",
+			"image",
+			"new_image",
+			"image",
+			"Image",
+			"image",
+			"						",
+			" ",
+			"print",
+			"url",
+			"image",
+			"Image",
+			"image",
+			"Image",
+			"image",
+			"Image",
+			"image",
+			"Image",
+			"image",
+			"Image",
+			"image",
+			"Image",
+			"image",
+			"Image",
+			"image"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" ",
+			"",
+			"straße",
+			"Straße"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "live-HTML5-graphics.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"stream",
+				"lib/streamert.js"
+			],
+			[
+				"streamert",
+				"public/javascripts/streamert_client.js"
+			],
+			[
+				"index.jade",
+				"views/index.jade"
+			],
+			[
+				"styl",
+				"public/stylesheets/style.css"
+			],
+			[
+				"style",
+				"public/stylesheets/style.css"
+			],
+			[
+				"layout",
+				"views/layout.jade"
+			],
+			[
+				"streamer",
+				"lib/streamert.js"
+			],
+			[
+				"index",
+				"routes/index.js"
+			],
+			[
+				"conf",
+				"config.json"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"data",
+				"live-HTML5-graphics/data.json"
+			],
+			[
+				"animate",
+				"lib/animate.css"
+			],
+			[
+				"tag",
+				"app/models/tag.rb"
+			],
+			[
+				"landing",
+				"app/views/pages/landing.html.erb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"portf",
+				"app/models/portfolio.rb"
+			],
+			[
+				"serach",
+				"app/controllers/search_controller.rb"
+			],
+			[
+				"read",
+				"README.rdoc"
+			],
+			[
+				"search",
+				"app/controllers/search_controller.rb"
+			],
+			[
+				"coupon",
+				"app/models/coupon.rb"
+			],
+			[
+				"variab",
+				"app/assets/stylesheets/variables.css.scss"
+			],
+			[
+				"variabl",
+				"app/assets/stylesheets/variables.css.scss"
+			],
+			[
+				"_crop",
+				"app/views/portraits/_crop.html.erb"
+			],
+			[
+				"new",
+				"app/views/password_resets/new.html.erb"
+			],
+			[
+				"form",
+				"app/views/portraits/_form.html.erb"
+			],
+			[
+				"portrait",
+				"app/controllers/portraits_controller.rb"
+			],
+			[
+				"session",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"image",
+				"app/controllers/images_controller.rb"
+			],
+			[
+				"edit",
+				"app/views/users/edit.html.erb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"portfo",
+				"app/models/portfolio.rb"
+			],
+			[
+				"notifica",
+				"app/views/portfolios/_notifications.html.erb"
+			],
+			[
+				"_form",
+				"app/views/portraits/_form.html.erb"
+			],
+			[
+				"rake",
+				"lib/tasks/deploy.rake"
+			],
+			[
+				"job",
+				"app/models/job_scheduler.rb"
+			],
+			[
+				"portra",
+				"app/models/portrait.rb"
+			],
+			[
+				"delayed",
+				"bin/delayed_job"
+			],
+			[
+				"gemfi",
+				"Gemfile.lock"
+			],
+			[
+				"jobsch",
+				"app/models/job_scheduler.rb"
+			],
+			[
+				"proc",
+				"Procfile"
+			],
+			[
+				"profc",
+				"Procfile-dev"
+			],
+			[
+				"proci",
+				"Procfile"
+			],
+			[
+				"hirefire",
+				"config/initializers/hirefire.rb"
+			],
+			[
+				"databas",
+				"config/database.yml"
+			],
+			[
+				"procf",
+				"Procfile"
+			],
+			[
+				"hiref",
+				"config/initializers/hirefire.rb"
+			],
+			[
+				"hirefi",
+				"config/initializers/hirefire.rb"
+			],
+			[
+				"portrai",
+				"app/models/portrait.rb"
+			],
+			[
+				"thumbna",
+				"app/views/portfolios/_thumbnails.html.erb"
+			],
+			[
+				"images",
+				"app/assets/javascripts/images.js.coffee"
+			],
+			[
+				"media",
+				"app/helpers/media_helper.rb"
+			],
+			[
+				"develop",
+				"config/environments/development.rb"
+			],
+			[
+				"portrao",
+				"app/controllers/portraits_controller.rb"
+			],
+			[
+				"delaye",
+				"bin/delayed_job"
+			],
+			[
+				"email",
+				"app/controllers/email_settings_controller.rb"
+			],
+			[
+				"2014",
+				"db/migrate/20141113135434_create_delayed_jobs.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"emails",
+				"app/models/email_setting.rb"
+			],
+			[
+				"moder",
+				"lib/tasks/moderation.rake"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"moderatio",
+				"app/controllers/admin/moderation_logs_controller.rb"
+			],
+			[
+				"migra",
+				"lib/tasks/migration.rake"
+			],
+			[
+				"deploy",
+				"lib/tasks/deploy.rake"
+			],
+			[
+				"contact",
+				"app/views/contacts/_contact.html.erb"
+			],
+			[
+				"video",
+				"app/models/video.rb"
+			],
+			[
+				"deve",
+				"config/environments/development.rb"
+			],
+			[
+				"_contacts",
+				"app/views/portfolios/_contacts.html.erb"
+			],
+			[
+				"_contct",
+				"app/views/contacts/_contact.html.erb"
+			],
+			[
+				"tagli",
+				"app/controllers/tag_links_controller.rb"
+			],
+			[
+				"tags",
+				"app/controllers/tags_controller.rb"
+			],
+			[
+				"contacts",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
+				"migrate",
+				"lib/tasks/migrate_images.rake"
+			],
+			[
+				"invitat",
+				"app/models/invitation.rb"
+			],
+			[
+				"inviti",
+				"app/models/invitation.rb"
+			],
+			[
+				"moderat",
+				"lib/tasks/moderation.rake"
+			],
+			[
+				"applica",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"thumb",
+				"app/views/portfolios/_thumbnails.html.erb"
+			],
+			[
+				"sorta",
+				"vendor/assets/javascripts/sortable.js"
+			],
+			[
+				"appl",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"applicat",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"unic",
+				"config/unicorn.rb"
+			],
+			[
+				"pro",
+				"config/environments/production.rb"
+			],
+			[
+				"develope",
+				"config/environments/development.rb"
+			],
+			[
+				"product",
+				"config/environments/production.rb"
+			],
+			[
+				"password",
+				"app/controllers/password_resets_controller.rb"
+			],
+			[
+				"_locat",
+				"app/views/portfolios/_location.html.erb"
+			],
+			[
+				"portr",
+				"app/models/portrait.rb"
+			],
+			[
+				"porttrait",
+				"app/controllers/portraits_controller.rb"
+			],
+			[
+				"scaff",
+				"app/assets/stylesheets/scaffolding.css.scss"
+			],
+			[
+				"notifi",
+				"app/views/portfolios/_notifications.html.erb"
+			],
+			[
+				"scaffo",
+				"app/assets/stylesheets/scaffolding.css.scss"
+			],
+			[
+				"pages",
+				"app/assets/stylesheets/pages.css.scss"
+			],
+			[
+				"error",
+				"app/views/pages/error.html.erb"
+			],
+			[
+				"scaffod",
+				"app/assets/stylesheets/scaffolding.css.scss"
+			],
+			[
+				"helper",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"crop",
+				"app/views/images/_crop.html.erb"
+			],
+			[
+				"image.rb",
+				"app/models/image.rb"
+			],
+			[
+				"en",
+				"config/locales/en.yml"
+			],
+			[
+				"carrier",
+				"config/initializers/carrierwave.rb"
+			],
+			[
+				"jcrop",
+				"vendor/assets/stylesheets/jquery.Jcrop.scss"
+			],
+			[
+				"uploader",
+				"app/uploaders/image_uploader.rb"
+			],
+			[
+				"image/form",
+				"app/views/images/_form.html.erb"
+			],
+			[
+				"video/form",
+				"app/views/videos/_form.html.erb"
+			],
+			[
+				"video/new",
+				"app/views/videos/new.html.erb"
+			],
+			[
+				"typo",
+				"app/assets/stylesheets/typography.css.scss"
+			],
+			[
+				"deplo",
+				"lib/tasks/deploy.rake"
+			],
+			[
+				"ru",
+				".ruby-version"
+			],
+			[
+				"spec",
+				"spec/spec_helper.rb"
+			],
+			[
+				"featured",
+				"app/views/portfolios/_featured.html.erb"
+			],
+			[
+				"passwor",
+				"app/controllers/password_resets_controller.rb"
+			],
+			[
+				"mobile",
+				"app/views/portfolios/_mobile_slider.html.erb"
+			],
+			[
+				"usermai",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"produ",
+				"config/environments/production.rb"
+			],
+			[
+				"config",
+				"config.ru"
+			],
+			[
+				"mai",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"imagehel",
+				"app/helpers/images_helper.rb"
+			],
+			[
+				"mobil",
+				"app/views/portfolios/_mobile_slider.html.erb"
+			],
+			[
+				"show",
+				"app/views/portfolios/show.html.erb"
+			],
+			[
+				"typogr",
+				"app/assets/stylesheets/typography.css.scss"
+			],
+			[
+				"applicatio",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"applic",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"variables",
+				"app/assets/stylesheets/variables.css.scss"
+			],
+			[
+				"toperato",
+				"app/assets/stylesheets/toperators.css.scss"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"notific",
+				"app/views/portfolios/_notifications.html.erb"
+			],
+			[
+				"migrat",
+				"db/migrate/20140905112911_add_tokens_to_user.rb"
+			],
+			[
+				"feature",
+				"app/views/portfolios/_featured.html.erb"
+			],
+			[
+				"event",
+				"app/controllers/admin/events_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 303.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
