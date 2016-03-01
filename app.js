@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var os = require('os');
 var fs = require('fs');
 var state = require("./lib/state");
 
@@ -26,10 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
   res.locals = {
-    config: state.current,
-    status: {
-      cpu: os.loadavg()[0].toFixed(1).toString() + " %"
-    }
+    config: state.current
   };
   next();
 });
