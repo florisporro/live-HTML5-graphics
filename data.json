@@ -1,1 +1,20 @@
-{"general":{"color1":"#FF8000","color2":"","color3":"","transparent_elements":"true","fonts":"techy","shadows":"true","animations":"fades"},"broadcastmessage":{"test":"true"}}
+{
+  "general": {
+    "color1": "#FF8000",
+    "color2": "",
+    "color3": "",
+    "transparent_elements": "true",
+    "fonts": "techy",
+    "shadows": "true",
+    "animations": "fades"
+  },
+  "clock": {
+    "visibility": false
+  },
+	"broadcastMessage": {"visibility" : false},
+	"lowerThirds": {"visibility" : false},
+	"logo": {"visibility" : false},
+	"geo": {"visibility" : false},
+	"schedule": {"visibility" : false},
+	"twitter": {"visibility" : false}
+}

@@ -32,12 +32,26 @@ router.get('/admin/general', function (req, res) {
 });
 
 // Process post requests and save the JSON file with user entered data back to disk.
-router.post('/admin/set/:widget', function(req, res) {
+router.post('/admin/:widget/set', function(req, res) {
 	new_state = state.current;
 	new_state[req.params.widget] = req.body;
 	if (state.update(new_state)) {
 		res.status = 200;
 		res.redirect("/admin/general");
+	}
+});
+
+router.get('/admin/:widget/show', function(req, res){
+	if (state.change(req.params.widget, 'visibility', true)) {
+		res.status = 200;
+		res.end();
+	}
+});
+
+router.get('/admin/:widget/hide', function(req, res){
+	if (state.change(req.params.widget, 'visibility', false)) {
+		res.status = 200;
+		res.end();
 	}
 });
 
@@ -47,8 +61,6 @@ router.get('/admin/logo/', logo.index);
 router.get('/admin/schedule/', schedule.index);
 router.get('/admin/clock/', clock.index);
 router.get('/admin/twitter/', twitter.index);
-
 router.get('/admin/broadcastMessage/', broadcastMessage.index);
-router.put('/admin/broadcastMessage/', broadcastMessage.update);
 
 module.exports = router;
