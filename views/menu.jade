@@ -3,45 +3,20 @@ ul.nav.nav-pills.nav-stacked
 		a(href='/admin')
 			i.glyphicon.glyphicon-cog
 			|  General
-	li(role="presentation", class=(title === "Broadcast Message" ? 'active' : ''))
-		a(href='/admin/broadcastMessage')
-			i.glyphicon.glyphicon-info-sign
-			|  Broadcast Message
-			span.label.label-default.pull-right
-				i.glyphicon.glyphicon-eye-close
-	li(role="presentation", class=(title === "Clock" ? 'active' : ''))
-		a(href='/admin/clock')
-			i.glyphicon.glyphicon-time
-			|  Clock
-			span.label.label-danger.pull-right
-				i.glyphicon.glyphicon-eye-open
-	li(role="presentation", class=(title === "Lower Thirds" ? 'active' : ''))
-		a(href='/admin/lowerThirds')
-			i.glyphicon.glyphicon-user
-			|  Lower Thirds
-			span.label.label-danger.pull-right
-				i.glyphicon.glyphicon-eye-open
-	li(role="presentation", class=(title === "Logo" ? 'active' : ''))
-		a(href='/admin/logo')
-			i.glyphicon.glyphicon-copyright-mark
-			|  Logo
-			span.label.label-default.pull-right
-				i.glyphicon.glyphicon-eye-close
-	li(role="presentation", class=(title === "Geo" ? 'active' : ''))
-		a(href='/admin/geo')
-			i.glyphicon.glyphicon-map-marker
-			|  Geo
-			span.label.label-default.pull-right
-				i.glyphicon.glyphicon-eye-close
-	li(role="presentation", class=(title === "Schedule" ? 'active' : ''))
-		a(href='/admin/schedule')
-			i.glyphicon.glyphicon-calendar
-			|  Schedule
-			span.label.label-default.pull-right
-				i.glyphicon.glyphicon-eye-close
-	li(role="presentation", class=(title === "Twitter" ? 'active' : ''))
-		a(href='/admin/twitter')
-			i.glyphicon.glyphicon-thumbs-up
-			|  Twitter
-			span.label.label-default.pull-right
-				i.glyphicon.glyphicon-eye-close
+	hr
+
+	mixin menu_item(name, fullname, glyphicon)
+		li.widget-menu(role="presentation", class=(title === fullname ? 'active' : ''), id=name)
+			a(href="/admin/#{name}")
+				i.glyphicon(class="glyphicon-#{glyphicon}")
+				|  #{fullname}
+				span.label.label-default.pull-right
+					i.glyphicon.glyphicon-eye-close
+	
+	+menu_item('broadcastMessage', 'Broadcast Message', 'info-sign')
+	+menu_item('clock', 'Clock', 'time')
+	+menu_item('lowerThirds', 'Lower Thirds', 'user')
+	+menu_item('logo', 'Logo', 'copyright-mark')
+	+menu_item('geo', 'Geo', 'map-marker')
+	+menu_item('schedule', 'Schedule', 'calendar')
+	+menu_item('twitter', 'Twitter', 'thumbs-up')
