@@ -34,10 +34,12 @@ router.get('/admin/general', function (req, res) {
 // Process post requests and save the JSON file with user entered data back to disk.
 router.post('/admin/:widget/set', function(req, res) {
 	new_state = state.current;
-	new_state[req.params.widget] = req.body;
+	for (var param in req.body) {
+		new_state[req.params.widget][param] = req.body[param];
+	}
 	if (state.update(new_state)) {
 		res.status = 200;
-		res.redirect("/admin/general");
+		res.redirect("/admin/"+req.params.widget);
 	}
 });
 

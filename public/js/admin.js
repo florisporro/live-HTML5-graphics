@@ -11,7 +11,7 @@ socket.on('state', function(state) {
 });
 
 $(document).ready(function(){
-	$('button').on('click', function(event){
+	$('button.getrequest').on('click', function(event){
 		event.preventDefault();
 		that = this;
 		var url = $(this).attr('href');
