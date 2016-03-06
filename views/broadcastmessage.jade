@@ -1,4 +1,30 @@
 extends admin_layout
 
 block widget
-	h3 TODO
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/broadcastMessage/hide").btn.btn-danger
+			i.glyphicon.glyphicon-eye-close
+			|  Hide
+
+	hr
+
+	form.add_new(action='/admin/broadcastMessage/entries/add', method='post')
+		.form-group
+			fieldset(name="message")
+				label.control-label Message
+				input.form-control(name="message")
+		.form-group
+			button.btn.btn-primary(type='submit') Add
+
+	hr
+
+	ul.list-group
+		each entry, index in config.broadcastMessage.entries
+			li.list-group-item
+				div.btn-group.pull-right.clearfix(style="margin-left: 1em")
+					button.getrequest(href="/admin/broadcastMessage/"+index+"/show").btn.btn-success 
+						i.glyphicon.glyphicon-eye-open
+						|  Show
+				div.btn-group.pull-right.clearfix
+					button.delete(href="/admin/broadcastMessage/entries/"+index+"/delete").btn.btn-danger Delete
+				span.clearfix=entry.message

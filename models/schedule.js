@@ -1,3 +1,3 @@
 exports.index = function(req, res) {
-	res.render('schedule', { title: 'Schedule' });
+	res.render('schedule', { title: 'Schedule', widget: 'schedule' });
 };

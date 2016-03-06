@@ -4,10 +4,16 @@ var offset = 0;
 
 socket.on('state', function (state) {
 
+	window.state = state;
+
+	// BROADCASTMESSAGE
+	if (state.broadcastMessage.visibility !== false) {
+		console.log(state.broadcastMessage.entries[state.broadcastMessage.visibility].message);
+	}
+
 	// CLOCK
 	$('#clock').toggleClass('hide', !state.clock.visibility);
 	offset = state.clock.offset;
-
 });
 
 function updateClock() {

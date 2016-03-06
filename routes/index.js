@@ -5,6 +5,16 @@ var router = express.Router();
 var io = require("../lib/io");
 var state = require("../lib/state");
 
+// var widgets = {
+// 	lowerThirds : require('../models/lowerthirds'),
+// 	clock : require('../models/clock'),
+// 	logo : require('../models/logo'),
+// 	schedule : require('../models/schedule'),
+// 	geo : require('../models/geo'),
+// 	twitter : require('../models/twitter'),
+// 	broadcastMessage : require('../models/broadcastmessage')
+// }
+
 var lowerThirds = require('../models/lowerthirds');
 var clock = require('../models/clock');
 var logo = require('../models/logo');
@@ -18,9 +28,6 @@ router.get('/', function(req, res, next) {
 	res.redirect('/admin/general');
 });
 
-// File that stores the user entered data for persistance
-var data_file = 'data.json';
-
 router.get('/admin', function(req, res) {
 	res.redirect("/admin/general");
 });
@@ -31,7 +38,6 @@ router.get('/admin/general', function (req, res) {
 	res.render('general', { title: 'General' });
 });
 
-// Process post requests and save the JSON file with user entered data back to disk.
 router.post('/admin/:widget/set', function(req, res) {
 	new_state = state.current;
 	for (var param in req.body) {
@@ -43,8 +49,27 @@ router.post('/admin/:widget/set', function(req, res) {
 	}
 });
 
-router.get('/admin/:widget/show', function(req, res){
-	if (state.change(req.params.widget, 'visibility', true)) {
+router.post('/admin/:widget/entries/add', function(req, res) {
+	if (state.add_entry(req.params.widget, req.body)) {
+		res.send({ widget: req.params.widget, id: Object.keys(state.current[req.params.widget].entries).length, data: req.body });
+		res.end();
+	}
+});
+router.post('/admin/:widget/entries/:entry/delete', function(req, res) {
+	if (state.delete_entry(req.params.widget, req.params.entry)) {
+		res.status = 200;
+		res.end();
+	}
+});
+router.post('/admin/:widget/entries/:entry/update', function(req, res) {
+	// if (state.update_entry(req.params.widget, req.params.entry, req.body)) {
+	// 	res.send(req.body);
+	// 	res.end();
+	// }
+});
+
+router.get('/admin/:widget/:entry?/show/', function(req, res){
+	if (state.change(req.params.widget, 'visibility', (req.params.entry != undefined ? req.params.entry : true))) {
 		res.status = 200;
 		res.end();
 	}
@@ -64,5 +89,6 @@ router.get('/admin/schedule/', schedule.index);
 router.get('/admin/clock/', clock.index);
 router.get('/admin/twitter/', twitter.index);
 router.get('/admin/broadcastMessage/', broadcastMessage.index);
+
 
 module.exports = router;
