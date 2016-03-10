@@ -3,13 +3,16 @@
 body, html {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('public/img/checkerboard.png');
 	position: relative;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
+	background: transparent;
+}
+body.preview {
+	background-image: url('public/img/checkerboard.png');
 }
 
 /* FONTS */
@@ -72,12 +75,47 @@ body, html {
 
 #clock {
 	width: 150px;
-	height: 40px;
+	padding: 5px 0;
 	position: absolute;
 	top: 7%;
 	left: 7%;
 	text-align: center;
 	font-size: 28px;
+}
+
+/* COUNTDOWN */
+
+#countdown {
+	position: absolute;
+	transition: all 2s ease-in-out;
+}
+#countdown.underneath_clock {
+	width: 150px;
+	padding: 5px 0;
+	text-align: center;
+	font-size: 28px;
+	top: 12%;
+	left: 7%;
+}
+#countdown.center {
+	width: 600px;
+	margin-left: -300px;
+	padding: 50px 0;
+	margin-top: -75px;
+	text-align: center;
+	font-size: 64px;
+	left: 50%;
+	top: 45%;
+}
+#countdown.lower {
+	width: 600px;
+	margin-left: -300px;
+	padding: 50px 0;
+	margin-top: -75px;
+	text-align: center;
+	font-size: 64px;
+	left: 50%;
+	top: 60%;
 }
 
 /* LOWER THIRD */
@@ -129,6 +167,36 @@ body, html {
 	font-size: 3em;
 	width: 100%;
 	padding: 1em 0;
+}
+
+#twitter {
+	position: absolute;
+	bottom: 14%;
+	right: 7%;
+	width: 40%;
+	padding: 45px 70px;
+}
+#twitter h1 {
+	margin: 0;
+	margin-bottom: 8px;
+	line-height: 1em;
+	font-size: 48px;
+}
+#twitter img {
+	float: left;
+	margin-right: 25px;
+}
+#twitter p {
+	font-weight: 400;
+	font-size: 28px;
+	margin: 0;
+}
+#twitter #function {
+	font-weight: 600;
+}
+#twitter #company {
+	font-style: italic;
+	font-weight: 200;
 }
 
 /* LOGO */

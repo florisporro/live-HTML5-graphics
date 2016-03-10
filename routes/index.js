@@ -22,6 +22,7 @@ var schedule = require('../models/schedule');
 var geo = require('../models/geo');
 var twitter = require('../models/twitter');
 var broadcastMessage = require('../models/broadcastmessage');
+var countdown = require('../models/countdown');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -87,6 +88,7 @@ router.get('/admin/geo/', geo.index);
 router.get('/admin/logo/', logo.index);
 router.get('/admin/schedule/', schedule.index);
 router.get('/admin/clock/', clock.index);
+router.get('/admin/countdown/', countdown.index);
 router.get('/admin/twitter/', twitter.index);
 router.get('/admin/broadcastMessage/', broadcastMessage.index);
 

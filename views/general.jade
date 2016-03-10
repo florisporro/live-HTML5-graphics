@@ -41,5 +41,11 @@ block widget
 			 	"fades" : { "name" : "Fades", "value" : "fades" }
 			})
 
+		+select('general', 'preview', 'Preview mode', config.general.preview,
+			{
+				"true" : { "name" : "On", "value" : "true" },
+			 	"false" : { "name" : "Off", "value" : "false" }
+			})
+
 		hr
 		button.btn.btn-primary(type='submit') Update

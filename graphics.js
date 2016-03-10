@@ -1,6 +1,7 @@
 var socket = io('http://localhost:3000');
 
-var offset = 0;
+var clock_offset = 0;
+var countdown_target = 0;
 
 socket.on('state', function (state) {
 
@@ -8,7 +9,7 @@ socket.on('state', function (state) {
 
 	console.log(state);
 
-	var widgets = ['broadcastMessage', 'clock', 'logo'];
+	var widgets = ['broadcastMessage', 'clock', 'countdown', 'logo', 'twitter'];
 
 	// Generic
 	for (let i in widgets) {
@@ -36,6 +37,7 @@ socket.on('state', function (state) {
 		// Text color
 		$('.widget').css('color', state.general.color4);
 	}
+	$('body').toggleClass('preview', (state.general.preview === 'true'));
 
 	// BROADCASTMESSAGE
 	if (state.broadcastMessage.visibility != false) {
@@ -47,10 +49,28 @@ socket.on('state', function (state) {
 		}
 	}
 
-	// CLOCK
-	offset = state.clock.offset;
+	// TWITTER
+	if (state.twitter.visibility !== false) {
+		$('#twitter img').attr('src', state.twitter.entries[state.twitter.visibility].img);
+		$('#twitter').addClass('hide');
+		$( "#twitter img" ).load(function() {
+			$('#twitter').removeClass('hide');
+		});
+		$('#twitter p').html("&#8220;"+state.twitter.entries[state.twitter.visibility].message+"&#8221;");
+		$('#twitter #name').text(state.twitter.entries[state.twitter.visibility].name);
+		$('#twitter #handle').text('@'+state.twitter.entries[state.twitter.visibility].handle);
+	}
 
-	// Logo
+	// CLOCK
+	clock_offset = state.clock.offset;
+
+	// COUNTDOWN
+	countdown_target = state.countdown.target;
+	$('#countdown').toggleClass('underneath_clock', (state.countdown.style === 'underneath_clock'));
+	$('#countdown').toggleClass('center', (state.countdown.style === 'center'));
+	$('#countdown').toggleClass('lower', (state.countdown.style === 'lower'));
+
+	// LOGO
 	$('#logo img').attr('src', './live-content/'+state.logo.file);
 	$('#logo').css('width', state.logo.width);
 	$('#logo').toggleClass('widget', !(state.logo.container === 'false'));
@@ -64,7 +84,7 @@ function updateClock() {
 	d = new Date();
 	currentMinutes = d.getMinutes();
 	currentSeconds = d.getSeconds();
-	currentHours = Number(d.getHours()) + Number(offset);
+	currentHours = Number(d.getHours()) + Number(clock_offset);
 	if(currentMinutes.toString().length == 1) {
 	  currentMinutes = "0" + currentMinutes;
 	}
@@ -75,3 +95,27 @@ function updateClock() {
 	$('#clock').html(currentHours + ':' + currentMinutes + ':' + currentSeconds);
 }
 setInterval(updateClock, 500);
+
+function updateCountdown() {
+	var t = Date.parse(countdown_target) - Date.parse(new Date());
+
+	var seconds = Math.floor( (t/1000) % 60 );
+	var minutes = Math.floor( (t/1000/60) % 60 );
+	var hours = Math.floor( (t/(1000*60*60)) % 24 );
+	var days = Math.floor( t/(1000*60*60*24) );
+
+	if(minutes.toString().length == 1) {
+	  minutes = "0" + minutes;
+	}
+	if (seconds.toString().length == 1) {
+	  seconds = "0" + seconds;
+	}
+	if (hours.toString().length == 1) {
+	  hours = "0" + hours;
+	}
+
+	var string = hours + ':' + minutes + ":" + seconds;
+
+	$('#countdown').html(string);
+}
+setInterval(updateCountdown, 500);

@@ -10,9 +10,9 @@ block widget
 
 	form.add_new(action='/admin/twitter/entries/add', method='post')
 		.form-group
-			fieldset(name="message")
-				label.control-label Message
-				input.form-control(name="message")
+			fieldset(name="tweet-id")
+				label.control-label Tweet ID to display
+				input.form-control(name="tweetId")
 		.form-group
 			button.btn.btn-primary(type='submit') Add
 

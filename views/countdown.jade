@@ -1,0 +1,27 @@
+extends admin_layout
+
+block widget
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/countdown/show").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Show
+		button.getrequest(href="/admin/countdown/hide").btn.btn-danger
+			i.glyphicon.glyphicon-eye-close
+			|  Hide
+
+	hr
+
+	form(action='/admin/countdown/set', method='post')
+		fieldset(name="target")
+			label.control-label Target (javascript dateTime object)
+			input.form-control(name="target", value=config.countdown.target)
+
+		+select('countdown', 'style', 'Style', config.countdown.style,
+			{
+				"underneath_clock" : { "name" : "Underneath Clock", "value" : "underneath_clock" },
+			 	"center" : { "name" : "Center", "value" : "center" },
+			 	"lower" : { "name" : "Lower", "value" : "lower" }
+			})
+
+		hr
+		button.btn.btn-primary(type='submit') Update
