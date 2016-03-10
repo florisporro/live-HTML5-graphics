@@ -40,7 +40,32 @@ body, html {
 }
 
 .shadowed {
+	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
 	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+}
+.widget {
+}
+
+.animation-fades {
+	transition: opacity 3s;
+}
+
+.background-transparency {
+	background: rgba(255, 255, 255, 0.5);
+}
+.background-solid {
+	background: rgba(255, 255, 255, 1);
+}
+
+.font-modern {
+	font-family: 'Open Sans';
+}
+.font-techy {
+	font-family: 'Open Sans';
+}
+.font-classical {
+	font-family: 'Open Sans';
 }
 
 /* CLOCK */
@@ -52,17 +77,7 @@ body, html {
 	top: 7%;
 	left: 7%;
 	text-align: center;
-
 	font-size: 28px;
-	font-family: 'Open Sans';
-	font-weight: 800;
-	background: rgba(255, 255, 255, 0.5);
-
-/*	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);*/
-	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-
-	transition: opacity 5s;
 }
 
 /* LOWER THIRD */
@@ -72,23 +87,14 @@ body, html {
 	bottom: 7%;
 	left: 7%;
 	width: 40%;
-	background: rgba(255, 255, 255, 0.5);
 	padding: 45px 70px;
 	border-bottom: 12px solid #FFF;
-	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-
-	transition: opacity 5s;
 }
 #lowerThird h1 {
-	font-family: 'Open Sans';
-	font-weight: 800;
 	margin: 0;
 	font-size: 48px;
 }
 #lowerThird p {
-	font-family: 'Open Sans';
 	font-weight: 400;
 	font-size: 28px;
 	margin: 0;
@@ -113,6 +119,17 @@ body, html {
 	font-weight: 800;
 }
 
+/* BROADCAST MESSAGE */
+#broadcastMessage {
+	position: absolute;
+	top: 60%;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-weight: 800;
+	font-size: 3em;
+	width: 100%;
+	padding: 1em 0;
+}
 
 /* LOGO */
 
@@ -120,10 +137,7 @@ body, html {
 	position: absolute;
 	top: 7%;
 	right: 7%;
-	width: 500px;
-	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
+	width: 150px;
 	margin: 0;
 	padding: 0;
 }

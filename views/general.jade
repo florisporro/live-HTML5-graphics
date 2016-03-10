@@ -9,8 +9,11 @@ block widget
 			label.control-label Secondary Color
 			input.form-control(name="color2", value=config.general.color2)
 		fieldset(name="color3")
-			label.control-label Tertiary Color
+			label.control-label Background Color (overwrites transparency setting)
 			input.form-control(name="color3", value=config.general.color3)
+		fieldset(name="color4")
+			label.control-label Text Color
+			input.form-control(name="color4", value=config.general.color4)
 
 		+select('general', 'transparent_elements', 'Transparent Elements', config.general.transparent_elements,
 			{

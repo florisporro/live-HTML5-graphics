@@ -51,7 +51,7 @@ router.post('/admin/:widget/set', function(req, res) {
 
 router.post('/admin/:widget/entries/add', function(req, res) {
 	if (state.add_entry(req.params.widget, req.body)) {
-		res.send({ widget: req.params.widget, id: Object.keys(state.current[req.params.widget].entries).length, data: req.body });
+		res.send({ widget: req.params.widget, id: Object.keys(state.current[req.params.widget].entries).length-1, data: req.body });
 		res.end();
 	}
 });

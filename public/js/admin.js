@@ -7,6 +7,12 @@ socket.on('cpu', function(cpu) {
 	$('#cpu').text(cpu);
 });
 
+socket.on('internet', function(internet) {
+	$('#internet').text((internet === true ? 'yes' : 'no'));
+	$('#internet').toggleClass('label-success', internet);
+	$('#internet').toggleClass('label-danger', !internet);
+});
+
 socket.on('state', function(state) {
 	window.state = state;
 
@@ -34,7 +40,9 @@ $(document).ready(function(){
 		if (window.confirm("Are you sure?")) {
 			var url = $(this).attr('href');
 			$.post(url, function(data){
-				$btn.parents('li').slideUp();
+				$btn.parents('li').slideUp(function(){
+					this.remove();
+				});
 				console.log(data);
 			});
 		}

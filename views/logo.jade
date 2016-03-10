@@ -1,4 +1,30 @@
 extends admin_layout
 
 block widget
-	h3 TODO
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/logo/show").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Show
+		button.getrequest(href="/admin/logo/hide").btn.btn-danger
+			i.glyphicon.glyphicon-eye-close
+			|  Hide
+
+	hr
+
+	form(action='/admin/logo/set', method='post')
+		fieldset(name="file")
+			label.control-label Logo file - place in /live-content
+			input.form-control(name="file", value=config.logo.file)
+
+		fieldset(name="width")
+			label.control-label Width (px)
+			input.form-control(name="width", type="number", value=config.logo.width)
+
+		+select('logo', 'container', 'Wrap in container', config.logo.container,
+			{
+				"true" : { "name" : "Yes", "value" : "true" },
+			 	"false" : { "name" : "No", "value" : "false" }
+			})
+
+		hr
+		button.btn.btn-primary(type='submit') Update
