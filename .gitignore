@@ -1,3 +1,5 @@
 node_modules/*
 data.json
 .env
+live-HTML5-graphics.sublime-project
+live-HTML5-graphics.sublime-workspace
