@@ -4,17 +4,22 @@ This graphics renderer template utilizes a combination of javascript, HTML5 and 
 
 The use case is an events broadcaster that might have several events per week, that needs simple graphics support such as lower thirds or the ability to display messages like "we'll be right back". The goal is to have one template with an admin panel that will fit a lot of simple use cases.
 
-## What's included?
- 
- * An admin panel that 
- 
+## What do you mean widgets?
 
+Each individual graphic use that would normally warrant a separate template, we're calling widgets. Currently we have widgets for:
+
+ * Broadcast messages such as "We'll be right back!"
+ * A clock showing the current time
+ * A countdown clock showing a countdown in hours, minutes and seconds to a pre-defined moment
+ * A logo in the top right corner loading an image from \live-content
+ * A beta twitter widget that takes a tweet ID and shows the corresponding tweet
 
 ## What's planned for the future?
 
- * More widgets such as a dynamic Twitter ticker, test patterns, location indicator with the Google Maps API, day schedule system to display during breaks, Instagram and Snapchat support
+ * More widgets such as a dynamic, easier Twitter ticker, test patterns, location indicator with the Google Maps API, day schedule system to display during breaks and let viewers know what's coming, Instagram and Snapchat support
  * Further styling options, actual font choices
  * Preview mode, the ability to have one client designated as a preview which you can 'take' to program
+ * Easier installation
 
 ## What does it look like?
 
@@ -90,6 +95,10 @@ You may run into an error when starting the server. Something to try:
 ```
 npm install express && npm install
 ```
+
+## How do I use the logo widget?
+
+Any image you put in the folder live-content can be referenced to be shown on the graphics renderer.
 
 ## How do I use the Twitter widget?
 
