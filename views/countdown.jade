@@ -13,7 +13,7 @@ block widget
 
 	form(action='/admin/countdown/set', method='post')
 		fieldset(name="target")
-			label.control-label Target (javascript dateTime object)
+			label.control-label Target (interpreted as javascript dateTime object)
 			input.form-control(name="target", value=config.countdown.target)
 
 		+select('countdown', 'style', 'Style', config.countdown.style,

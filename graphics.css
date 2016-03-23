@@ -74,13 +74,13 @@ body.preview {
 /* CLOCK */
 
 #clock {
-	width: 150px;
-	padding: 5px 0;
+	width: 250px;
+	padding: 10px 0;
 	position: absolute;
-	top: 7%;
-	left: 7%;
+	top: 9%;
+	left: 9%;
 	text-align: center;
-	font-size: 28px;
+	font-size: 36px;
 }
 
 /* COUNTDOWN */
@@ -90,12 +90,12 @@ body.preview {
 	transition: all 2s ease-in-out;
 }
 #countdown.underneath_clock {
-	width: 150px;
-	padding: 5px 0;
+	width: 250px;
+	padding: 10px 0;
 	text-align: center;
-	font-size: 28px;
-	top: 12%;
-	left: 7%;
+	font-size: 36px;
+	top: 16%;
+	left: 9%;
 }
 #countdown.center {
 	width: 600px;

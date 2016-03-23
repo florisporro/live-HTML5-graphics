@@ -6,40 +6,52 @@ The use case is an events broadcaster that might have several events per week, t
 
 ## What's included?
  
- * A dynamically generated quick access 'admin panel' to change values and cue animations on the template in real time
- * A clock widget
- * A lower third widget
- * Widgets will fade their opacity if visibility is turned off
+ * An admin panel that 
+ 
 
-It's pretty bare bones but it works and CasparCG renders it.
 
 ## What's planned for the future?
 
- * More widgets such as a news / Twitter ticker, broadcaster messages ('stand-by for broadcast'), test patterns, location indicator with the Google Maps API, day schedule system to display during breaks, client / sponsor logo display, 
- * Styling options
- * Better admin side, mobile support, etc
+ * More widgets such as a dynamic Twitter ticker, test patterns, location indicator with the Google Maps API, day schedule system to display during breaks, Instagram and Snapchat support
+ * Further styling options, actual font choices
+ * Preview mode, the ability to have one client designated as a preview which you can 'take' to program
 
 ## What does it look like?
 
-Current admin panel:
+Admin panel:
 
-![](https://github.com/florisporro/live-HTML5-graphics/blob/master/adminpanel.jpg)
+![](https://github.com/florisporro/live-HTML5-graphics/blob/master/adminpanel.png)
 
-Current rendering:
+A variety of styling settings:
+
+![](https://github.com/florisporro/live-HTML5-graphics/blob/master/general.png)
+
+Rendering in CasparCG:
 
 ![](https://github.com/florisporro/live-HTML5-graphics/blob/master/rendering.jpg)
 
 ## How is it built?
 
-The system is comprised of three components.
+CasparCG renders graphics_render.html. This file references graphics.js, which makes a connection to a NodeJS server using Socket.io. The server also serves an admin panel, so when the admin panel receives a change from the operator it sends the new state to the renderer using a Socket.io message, which means it updates immediately. All settings are saved constantly in data.json for persistence.
+
+In summary:
 
  * **graphics_render.html** - the HTML file loaded by CasparCG. Backed by a CSS file for styling.
- * **graphics.js** - the script that governs the front-end. Does a poll to the server every second and processes the response data.
- * **server.js** - NodeJS server that takes input from an admin panel and stores the values entered by the operator in a JSON file for persistance, so they remain even if the server is rebooted. This data file (data.json) is also the file polled by graphics.js.
+ * **graphics.js** - Connects to NodeJS server and dynamically changes graphics_render.html depending on settings. Also applies a lot of dynamic styling.
+ * **app.js** - NodeJS server that takes input from an admin panel and stores the values entered by the operator in a JSON file for persistance, so they remain even if the server is restarted.
 
 ## How do I use it?
 
-First install Node JS if you don't have it already. Open a command terminal and navigate to the folder where you cloned this repository. Run:
+You'll need to use the command line. Find somewhere to store this application and run:
+
+```
+git clone https://github.com/florisporro/live-HTML5-graphics.git
+```
+
+(you might need to install Git first, which you can do by installing the Github client)
+
+Now you need to install Node JS so we can run the server. Once done, using a terminal, navigate to the directory where you cloned this repository and run:
+
 
 ```
 npm install
@@ -47,13 +59,15 @@ npm install
 
 That should install all the dependencies.
 
-Change your CasparCG server templates folder in the configuration file so you can display the graphics_render.html file. Mine looks like this:
+You need to change your CasparCG server templates folder in the CasparCG Server configuration file so you can display the graphics_render.html file. Mine looks like this:
 
 ```
 <template-path>C:\STREAMING\CasparCG\live-HTML5-graphics</template-path>
 ```
 
-Start the Node server with:
+Rename data_example.json to data.json.
+
+Now start the Node server with:
 
 ```
 node server.js
@@ -62,7 +76,34 @@ node server.js
 Navigate to the admin panel in your web browser:
 
 ```
-http://localhost:27015/admin
+http://localhost:3000/admin
 ```
 
 Start the template in CasparCG. That should do it!
+
+I know this is quite elaborate right now, we'll be improving that in the future!
+
+## Troubleshooting
+
+You may run into an error when starting the server. Something to try:
+
+```
+npm install express && npm install
+```
+
+## How do I use the Twitter widget?
+
+Go to https://apps.twitter.com/ and create an application.
+
+Then create a new file in the root of the project folder called .env, and add this info:
+
+```
+TWITTER_CONSUMER_KEY = 
+TWITTER_CONSUMER_SECRET = 
+TWITTER_ACCESS_TOKEN_KEY = 
+TWITTER_ACCESS_TOKEN_SECRET = 
+```
+
+And fill in the corresponding information.
+
+To use the widget, copy-paste a tweet ID from your timeline (you can find this by getting a direct URL to the tweet, the ID is a long number in the URL).

@@ -1,3 +1,4 @@
+"use strict"
 var socket = io('http://localhost:3000');
 
 var clock_offset = 0;
@@ -12,7 +13,7 @@ socket.on('state', function (state) {
 	var widgets = ['broadcastMessage', 'clock', 'countdown', 'logo', 'twitter'];
 
 	// Generic
-	for (let i in widgets) {
+	for (var i in widgets) {
 		// Widget updating
 		$('#'+widgets[i]).toggleClass('hide', !state[widgets[i]].visibility);
 
@@ -81,10 +82,10 @@ socket.on('state', function (state) {
 });
 
 function updateClock() {
-	d = new Date();
-	currentMinutes = d.getMinutes();
-	currentSeconds = d.getSeconds();
-	currentHours = Number(d.getHours()) + Number(clock_offset);
+	var d = new Date();
+	var currentMinutes = d.getMinutes();
+	var currentSeconds = d.getSeconds();
+	var currentHours = Number(d.getHours()) + Number(clock_offset);
 	if(currentMinutes.toString().length == 1) {
 	  currentMinutes = "0" + currentMinutes;
 	}

@@ -1,0 +1,67 @@
+{
+  "general": {
+    "color1": "#FF8000",
+    "color2": "rgba(255, 100, 100, 0.5)",
+    "color3": "",
+    "transparent_elements": "false",
+    "fonts": "modern",
+    "shadows": "true",
+    "animations": "fades",
+    "color4": "#000000",
+    "preview": "true"
+  },
+  "clock": {
+    "offset": "0",
+    "visibility": true
+  },
+  "countdown": {
+    "target": "01-01-2017 00:00",
+    "visibility": false,
+    "style": "underneath_clock"
+  },
+  "broadcastMessage": {
+    "visibility": false,
+    "entries": [
+      {
+        "message": "We'll be back with you shortly!"
+      },
+      {
+        "message": "We are currently troubleshooting an issue with sound."
+      },
+      {
+        "message": "We are currently troubleshooting an issue with video."
+      },
+      {
+        "message": "This livestream has concluded. Thank you for watching!"
+      }
+    ]
+  },
+  "lowerThirds": {
+    "visibility": false
+  },
+  "logo": {
+    "visibility": false,
+    "offset": "",
+    "container": "true",
+    "file": "SME_Logo_Color_small.png",
+    "width": "350"
+  },
+  "geo": {
+    "visibility": false
+  },
+  "schedule": {
+    "visibility": false
+  },
+  "twitter": {
+    "visibility": false,
+    "entries": [
+      {
+        "id": 695546141308485600,
+        "message": "Film Reel - Stream My Event Creative\n\nhttps://t.co/thbVFf1krd https://t.co/3hQr7zL9nM",
+        "name": "Stream My Event",
+        "handle": "Stream_My_Event",
+        "img": "http://pbs.twimg.com/profile_images/601051706240200704/jZwAsxIv_normal.png"
+      }
+    ]
+  }
+}
