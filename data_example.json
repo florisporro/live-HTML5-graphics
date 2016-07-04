@@ -4,18 +4,18 @@
     "color2": "rgba(255, 100, 100, 0.5)",
     "color3": "",
     "transparent_elements": "false",
-    "fonts": "modern",
-    "shadows": "true",
+    "fonts": "classical",
+    "shadows": "false",
     "animations": "fades",
     "color4": "#000000",
     "preview": "true"
   },
   "clock": {
     "offset": "0",
-    "visibility": true
+    "visibility": false
   },
   "countdown": {
-    "target": "01-01-2017 00:00",
+    "target": "03-11-2017 09:00",
     "visibility": false,
     "style": "underneath_clock"
   },
@@ -37,13 +37,20 @@
     ]
   },
   "lowerThirds": {
-    "visibility": false
+    "visibility": "0",
+    "entries": [
+      {
+        "name": "Name",
+        "function": "Function",
+        "company": "Company"
+      }
+    ]
   },
   "logo": {
     "visibility": false,
     "offset": "",
     "container": "true",
-    "file": "SME_Logo_Color_small.png",
+    "file": "",
     "width": "350"
   },
   "geo": {
@@ -54,14 +61,6 @@
   },
   "twitter": {
     "visibility": false,
-    "entries": [
-      {
-        "id": 695546141308485600,
-        "message": "Film Reel - Stream My Event Creative\n\nhttps://t.co/thbVFf1krd https://t.co/3hQr7zL9nM",
-        "name": "Stream My Event",
-        "handle": "Stream_My_Event",
-        "img": "http://pbs.twimg.com/profile_images/601051706240200704/jZwAsxIv_normal.png"
-      }
-    ]
+    "entries": []
   }
 }

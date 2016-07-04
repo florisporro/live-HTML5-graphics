@@ -71,7 +71,7 @@ $(document).ready(function(){
 			Delete</button>
 			</div>
 			<span class="clearfix">
-			${data.data.message}</span></li>`;
+			${data.data.message || data.data.name+" / "+data.data.function+" | "+data.data.company}</span></li>`;
 
 			$list.append(newEntry);
 

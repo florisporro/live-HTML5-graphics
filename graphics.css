@@ -120,7 +120,7 @@ body.preview {
 
 /* LOWER THIRD */
 
-#lowerThird {
+#lowerThirds {
 	position: absolute;
 	bottom: 7%;
 	left: 7%;
@@ -128,19 +128,19 @@ body.preview {
 	padding: 45px 70px;
 	border-bottom: 12px solid #FFF;
 }
-#lowerThird h1 {
+#lowerThirds h1 {
 	margin: 0;
 	font-size: 48px;
 }
-#lowerThird p {
+#lowerThirds p {
 	font-weight: 400;
 	font-size: 28px;
 	margin: 0;
 }
-#lowerThird #function {
+#lowerThirds #function {
 	font-weight: 600;
 }
-#lowerThird #company {
+#lowerThirds #company {
 	font-style: italic;
 	font-weight: 200;
 }

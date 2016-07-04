@@ -10,7 +10,7 @@ socket.on('state', function (state) {
 
 	console.log(state);
 
-	var widgets = ['broadcastMessage', 'clock', 'countdown', 'logo', 'twitter'];
+	var widgets = ['broadcastMessage', 'clock', 'countdown', 'logo', 'twitter', 'lowerThirds'];
 
 	// Generic
 	for (var i in widgets) {
@@ -41,12 +41,25 @@ socket.on('state', function (state) {
 	$('body').toggleClass('preview', (state.general.preview === 'true'));
 
 	// BROADCASTMESSAGE
-	if (state.broadcastMessage.visibility != false) {
+	if (state.broadcastMessage.visibility !== false) {
 		if (state.broadcastMessage.entries[state.broadcastMessage.visibility] === undefined) {
 			console.log('BroadcastMessage hidden because message id does not exist. Deleted whilst showing?');
 			$('#'+widgets[i]).text('');
 		} else {
 			$('#broadcastMessage').text(state.broadcastMessage.entries[state.broadcastMessage.visibility].message);
+		}
+	}
+
+	// LOWER THIRDS
+	if (state.lowerThirds.visibility !== false) {
+		if (state.lowerThirds.entries[state.lowerThirds.visibility] === undefined) {
+			console.log('lowerThirds hidden because message id does not exist. Deleted whilst showing?');
+			$('#'+widgets[i]).text('');
+		} else {
+			console.log(state.lowerThirds.entries[state.lowerThirds.visibility].name);
+			$('#lowerThirds #name').text(state.lowerThirds.entries[state.lowerThirds.visibility].name);
+			$('#lowerThirds #function').text(state.lowerThirds.entries[state.lowerThirds.visibility].function);
+			$('#lowerThirds #company').text(state.lowerThirds.entries[state.lowerThirds.visibility].company);
 		}
 	}
 
