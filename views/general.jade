@@ -34,12 +34,18 @@ block widget
 			 	"false" : { "name" : "Off", "value" : "false" }
 			})
 
-		+select('general', 'animations', 'Animations (INOP)', config.general.animations,
+		+select('general', 'animations', 'Animations', config.general.animations,
 			{
-				"false" : { "name" : "Off", "value" : "true" },
+				"bouncy" : { "name" : "Bouncy", "value" : "bouncy" },
+				"perspective" : { "name" : "Perspective (INOP)", "value" : "perspective" },
 			 	"slides" : { "name" : "Slides", "value" : "slides" },
-			 	"fades" : { "name" : "Fades", "value" : "fades" }
+			 	"fades" : { "name" : "Fades", "value" : "fades" },
+			 	"character" : { "name" : "Character (INOP)", "value" : "character" }
 			})
+
+		fieldset(name="animation_length")
+			label.control-label Animation length (ms)
+			input.form-control(name="animation_length", value=config.general.animation_length)
 
 		+select('general', 'preview', 'Preview mode', config.general.preview,
 			{

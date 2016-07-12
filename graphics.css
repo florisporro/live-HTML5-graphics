@@ -48,10 +48,11 @@ body.preview {
 	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
 }
 .widget {
+	transition: opacity 1s;
 }
 
 .animation-fades {
-	transition: opacity 3s;
+	/* transition: opacity 3s; */
 }
 
 .background-transparency {
@@ -87,7 +88,6 @@ body.preview {
 
 #countdown {
 	position: absolute;
-	transition: all 2s ease-in-out;
 }
 #countdown.underneath_clock {
 	width: 250px;
@@ -143,18 +143,6 @@ body.preview {
 #lowerThirds #company {
 	font-style: italic;
 	font-weight: 200;
-}
-
-
-/* SPONSOR MESSAGE / IMAGE */
-
-#sponsormessage {
-	position: absolute;
-	top: 7%;
-	right: 7%;
-	text-align: right;
-	font-family: 'Open Sans';
-	font-weight: 800;
 }
 
 /* BROADCAST MESSAGE */
