@@ -182,9 +182,15 @@ body.preview {
 	line-height: 1em;
 	font-size: 48px;
 }
-#twitter img {
+#twitter img#author {
 	float: left;
 	margin-right: 25px;
+}
+#twitter img#media_thumbnail {
+	position: absolute;
+	height: 350px;
+	right: 0%;
+	top: -350px;
 }
 #twitter p {
 	font-weight: 400;

@@ -65,7 +65,14 @@ socket.on('state', function (state) {
 
 	// TWITTER
 	if (state.twitter.visibility !== false) {
-		$('#twitter img').attr('src', state.twitter.entries[state.twitter.visibility].img);
+		$('#twitter img#author').attr('src', state.twitter.entries[state.twitter.visibility].img);
+		if (state.twitter.entries[state.twitter.visibility].media !== null) {
+			$('#twitter img#media_thumbnail').show();
+			$('#twitter img#media_thumbnail').attr('src', state.twitter.entries[state.twitter.visibility].media);
+			$('#twitter img#media_thumbnail').toggleClass('shadowed', (state.general.shadows === 'true'));
+		} else {
+			$('#twitter img#media_thumbnail').hide();
+		}
 		$('#twitter').addClass('hide');
 		$( "#twitter img" ).load(function() {
 			$('#twitter').removeClass('hide');

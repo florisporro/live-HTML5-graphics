@@ -7,6 +7,10 @@ socket.on('cpu', function(cpu) {
 	$('#cpu').text(cpu);
 });
 
+socket.on('clients', function(clients) {
+	$('#clients').text(clients);
+});
+
 socket.on('internet', function(internet) {
 	$('#internet').text((internet === true ? 'yes' : 'no'));
 	$('#internet').toggleClass('label-success', internet);
