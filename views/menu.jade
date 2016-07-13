@@ -3,6 +3,11 @@ ul#navigation.nav.nav-pills.nav-stacked
 		a(href='/admin')
 			i.glyphicon.glyphicon-cog
 			|  General
+
+	li(role="presentation", class=(title === "CasparCG Control" ? 'active' : ''))
+		a(href='/admin/casparCG')
+			i.glyphicon.glyphicon-cog
+			|  CasparCG Control
 	hr
 
 	mixin menu_item(name, fullname, glyphicon)

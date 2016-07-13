@@ -5,15 +5,7 @@ var router = express.Router();
 var io = require("../lib/io");
 var state = require("../lib/state");
 
-// var widgets = {
-// 	lowerThirds : require('../models/lowerthirds'),
-// 	clock : require('../models/clock'),
-// 	logo : require('../models/logo'),
-// 	schedule : require('../models/schedule'),
-// 	geo : require('../models/geo'),
-// 	twitter : require('../models/twitter'),
-// 	broadcastMessage : require('../models/broadcastmessage')
-// }
+var casparCG = require("../lib/casparCG");
 
 var lowerThirds = require('../models/lowerthirds');
 var clock = require('../models/clock');
@@ -37,6 +29,26 @@ router.get('/admin', function(req, res) {
 router.get('/admin/general', function (req, res) {
 	res.locals.data = state.current;
 	res.render('general', { title: 'General' });
+});
+
+router.get('/admin/casparCG', function (req, res) {
+	res.locals.data = state.current;
+	res.render('casparCG', { title: 'CasparCG control' });
+});
+
+router.get('/admin/casparCG/connect', function (req, res) {
+	casparCG.connect(state.current.casparCG);
+	res.end();
+});
+
+router.get('/admin/casparCG/preview/:state', function (req, res) {
+	casparCG.preview(req.params.state);
+	res.end();
+});
+
+router.get('/admin/casparCG/streaming/:state', function (req, res) {
+	casparCG.streaming(state.current.casparCG, req.params.state);
+	res.end();
 });
 
 router.post('/admin/:widget/set', function(req, res) {

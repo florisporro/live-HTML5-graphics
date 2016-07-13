@@ -17,6 +17,18 @@ socket.on('internet', function(internet) {
 	$('#internet').toggleClass('label-danger', !internet);
 });
 
+socket.on('casparCG', function(casparCG) {
+	$('#casparCG').text((casparCG === true ? 'yes' : 'no'));
+	$('#casparCG').toggleClass('label-success', casparCG);
+	$('#casparCG').toggleClass('label-danger', !casparCG);
+
+	if(casparCG){
+		$('button[href="/admin/casparcg/connect"]').attr('disabled', 'disabled');
+	} else {
+		$('button[href="/admin/casparcg/connect"]').removeAttr('disabled');
+	}
+});
+
 socket.on('state', function(state) {
 	window.state = state;
 

@@ -72,6 +72,17 @@ You need to change your CasparCG server templates folder in the CasparCG Server 
 
 Rename data_example.json to data.json.
 
+You need to create a .env file if you want to use the Twitter API:
+
+```
+TWITTER_CONSUMER_KEY = 
+TWITTER_CONSUMER_SECRET = 
+TWITTER_ACCESS_TOKEN_KEY = 
+TWITTER_ACCESS_TOKEN_SECRET = 
+EMBEDLY_KEY = 
+
+```
+
 Now start the Node server with:
 
 ```

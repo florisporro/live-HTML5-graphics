@@ -1,0 +1,93 @@
+extends admin_layout
+
+block widget
+	form(action='/admin/casparCG/set', method='post')
+		fieldset(name="server_IP")
+			label.control-label Server IP
+			input.form-control(name="server_IP", value=config.casparCG.server_IP)
+
+		hr
+
+		fieldset(name="primaryserver")
+			label.control-label Primary Streaming Server
+			input.form-control(name="primaryserver", value=config.casparCG.primaryserver)
+
+		fieldset(name="secondaryserver")
+			label.control-label Secondary Streaming Server (optional)
+			input.form-control(name="secondaryserver", value=config.casparCG.secondaryserver)
+
+		fieldset(name="streamname")
+			label.control-label Stream Name
+			input.form-control(name="streamname", value=config.casparCG.streamname)
+
+		hr
+
+		fieldset(name="recordingpath")
+			label.control-label Recording Path (full path, leave blank for default)
+			input.form-control(name="recordingpath", value=config.casparCG.recordingpath)
+
+		hr
+
+		fieldset(name="resolution")
+			label.control-label Resolution &amp; Framerate
+			select.form-control(name="resolution")
+				option(value='1080p3000', selected=(config.casparCG.resolution=='1080p3000')) 1080p3000
+				option(value='1080p2997', selected=(config.casparCG.resolution=='1080p2997')) 1080p2997
+				option(value='1080p2500', selected=(config.casparCG.resolution=='1080p2500')) 1080p2500
+				option(value='1080i5000', selected=(config.casparCG.resolution=='1080i5000')) 1080i5000
+				option(value='1080i59.94', selected=(config.casparCG.resolution=='1080i59.94')) 1080i59.94
+				option(value='1080i6000', selected=(config.casparCG.resolution=='1080i6000')) 1080i6000
+
+		fieldset(name="bitrate")
+			label.control-label Bitrate
+			select.form-control(name="bitrate", value=config.casparCG.bitrate)
+				option(value='50000k', selected=(config.casparCG.bitrate=='50000k')) 50mbps
+				option(value='40000k', selected=(config.casparCG.bitrate=='40000k')) 40mbps
+				option(value='30000k', selected=(config.casparCG.bitrate=='30000k')) 30mbps
+				option(value='20000k', selected=(config.casparCG.bitrate=='20000k')) 20mbps
+				option(value='10000k', selected=(config.casparCG.bitrate=='10000k')) 10mbps
+				option(value='5000k', selected=(config.casparCG.bitrate=='5000k')) 5mbps
+				option(value='2000k', selected=(config.casparCG.bitrate=='2000k')) 2mbps
+				option(value='500k', selected=(config.casparCG.bitrate=='500k')) 500kbps
+
+		hr
+		
+		button.btn.btn-primary.update(type='submit') Update
+
+		hr
+
+
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/casparcg/connect").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Connect and Initialize
+
+		button.getrequest(href="/admin/casparcg/preview/on").btn.btn-default
+			i.glyphicon.glyphicon-eye-open
+			|  Preview On
+
+		button.getrequest(href="/admin/casparcg/preview/off").btn.btn-default
+			i.glyphicon.glyphicon-eye-closed
+			|  Preview Off
+	
+	hr
+
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/casparcg/streaming/on").btn.btn-default
+			i.glyphicon.glyphicon-eye-open
+			|  Streaming On
+
+		button.getrequest(href="/admin/casparcg/streaming/off").btn.btn-default
+			i.glyphicon.glyphicon-eye-closed
+			|  Streaming Off
+
+	hr
+		
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/casparcg/streaming/on").btn.btn-default
+			i.glyphicon.glyphicon-eye-open
+			|  Recording On
+
+		button.getrequest(href="/admin/casparcg/recording/off").btn.btn-default
+			i.glyphicon.glyphicon-eye-closed
+			|  Recording Off
