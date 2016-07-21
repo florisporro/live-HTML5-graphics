@@ -27,12 +27,13 @@ block widget
 	hr
 
 	ul.list-group
-		each entry, index in config.lowerThirds.entries
-			li.list-group-item
-				div.btn-group.pull-right.clearfix(style="margin-left: 1em")
-					button.getrequest(href="/admin/lowerThirds/"+index+"/show").btn.btn-success 
-						i.glyphicon.glyphicon-eye-open
-						|  Show
-				div.btn-group.pull-right.clearfix
-					button.delete(href="/admin/lowerThirds/entries/"+index+"/delete").btn.btn-danger Delete
-				span.clearfix=entry.name+" / "+entry.function+" | "+entry.company
+		if config.lowerThirds.entries
+			each entry, index in config.lowerThirds.entries
+				li.list-group-item
+					div.btn-group.pull-right.clearfix(style="margin-left: 1em")
+						button.getrequest(href="/admin/lowerThirds/"+index+"/show").btn.btn-success 
+							i.glyphicon.glyphicon-eye-open
+							|  Show
+					div.btn-group.pull-right.clearfix
+						button.delete(href="/admin/lowerThirds/entries/"+index+"/delete").btn.btn-danger Delete
+					span.clearfix=entry.name+" / "+entry.function+" | "+entry.company

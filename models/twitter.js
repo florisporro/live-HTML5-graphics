@@ -63,8 +63,12 @@ function cache_tweets(cb){
 }
 
 exports.index = function(req, res) {
-	cache_tweets(function(tweets){
-		console.log(tweets);
+	if (state.current.twitter.entries) {
+		cache_tweets(function(tweets){
+			console.log(tweets);
+			res.render('twitter', { title: 'Twitter', widget: 'twitter'});
+		});
+	} else {
 		res.render('twitter', { title: 'Twitter', widget: 'twitter'});
-	});
+	}
 };
