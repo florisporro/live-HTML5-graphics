@@ -94,9 +94,7 @@ router.get('/admin/:widget/hide', function(req, res){
 });
 
 router.get('/admin/lowerThirds/', lowerThirds.index);
-router.get('/admin/geo/', geo.index);
 router.get('/admin/logo/', logo.index);
-router.get('/admin/schedule/', schedule.index);
 router.get('/admin/clock/', clock.index);
 router.get('/admin/countdown/', countdown.index);
 router.get('/admin/twitter/', twitter.index);
