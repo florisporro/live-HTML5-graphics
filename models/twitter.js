@@ -40,7 +40,7 @@ function cache_tweets(cb){
 						throw new Error (error);
 					}
 					
-					if (tweet.entities.urls[0].url) {
+					if (tweet.entities.urls.count > 0) {
 						embedly.oembed({url: tweet.entities.urls[0].url}, function(err, objs) {
 							if (!!err) {
 								console.error('request #1 failed');
