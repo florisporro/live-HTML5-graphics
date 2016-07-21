@@ -38,6 +38,10 @@ router.get('/admin/casparCG/connect', function (req, res) {
 	casparCG.connect(state.current.casparCG);
 	res.end();
 });
+router.get('/admin/casparCG/reset', function (req, res) {
+	casparCG.reset();
+	res.end();
+});
 
 router.get('/admin/casparCG/preview/:state', function (req, res) {
 	casparCG.preview(req.params.state);

@@ -1,6 +1,47 @@
 extends admin_layout
 
 block widget
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/casparcg/connect").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Connect
+
+		button.getrequest(href="/admin/casparcg/reset").btn.btn-success
+			i.glyphicon.glyphicon-eye-open
+			|  Reset
+
+		button.getrequest(href="/admin/casparcg/preview/on").btn.btn-default
+			i.glyphicon.glyphicon-eye-open
+			|  Preview On
+
+		button.getrequest(href="/admin/casparcg/preview/off").btn.btn-default
+			i.glyphicon.glyphicon-eye-closed
+			|  Preview Off
+	
+	hr
+
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/casparcg/streaming/on").btn.btn-default
+			i.glyphicon.glyphicon-eye-open
+			|  Streaming On
+
+		button.getrequest(href="/admin/casparcg/streaming/off").btn.btn-default
+			i.glyphicon.glyphicon-eye-closed
+			|  Streaming Off
+
+	hr
+		
+	div.btn-group.btn-group-lg.btn-block
+		button.getrequest(href="/admin/casparcg/streaming/on").btn.btn-default
+			i.glyphicon.glyphicon-eye-open
+			|  Recording On
+
+		button.getrequest(href="/admin/casparcg/recording/off").btn.btn-default
+			i.glyphicon.glyphicon-eye-closed
+			|  Recording Off
+
+	hr
+
 	form(action='/admin/casparCG/set', method='post')
 		fieldset(name="server_IP")
 			label.control-label Server IP
@@ -53,41 +94,3 @@ block widget
 		hr
 		
 		button.btn.btn-primary.update(type='submit') Update
-
-		hr
-
-
-	div.btn-group.btn-group-lg.btn-block
-		button.getrequest(href="/admin/casparcg/connect").btn.btn-success
-			i.glyphicon.glyphicon-eye-open
-			|  Connect and Initialize
-
-		button.getrequest(href="/admin/casparcg/preview/on").btn.btn-default
-			i.glyphicon.glyphicon-eye-open
-			|  Preview On
-
-		button.getrequest(href="/admin/casparcg/preview/off").btn.btn-default
-			i.glyphicon.glyphicon-eye-closed
-			|  Preview Off
-	
-	hr
-
-	div.btn-group.btn-group-lg.btn-block
-		button.getrequest(href="/admin/casparcg/streaming/on").btn.btn-default
-			i.glyphicon.glyphicon-eye-open
-			|  Streaming On
-
-		button.getrequest(href="/admin/casparcg/streaming/off").btn.btn-default
-			i.glyphicon.glyphicon-eye-closed
-			|  Streaming Off
-
-	hr
-		
-	div.btn-group.btn-group-lg.btn-block
-		button.getrequest(href="/admin/casparcg/streaming/on").btn.btn-default
-			i.glyphicon.glyphicon-eye-open
-			|  Recording On
-
-		button.getrequest(href="/admin/casparcg/recording/off").btn.btn-default
-			i.glyphicon.glyphicon-eye-closed
-			|  Recording Off
