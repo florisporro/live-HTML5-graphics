@@ -33,13 +33,43 @@ socket.on('state', function(state) {
 	window.state = state;
 
 	for (var widget in state) {
-		if (state[widget].visibility != undefined) {
-			$('#navigation #'+widget).find('.eye').toggleClass('label-default', !state[widget].visibility);
-			$('#navigation #'+widget).find('.eye').toggleClass('label-success', state[widget].visibility);
-			$('#navigation #'+widget).find('.eye').find('i').toggleClass('glyphicon-eye-open', state[widget].visibility);
-			$('#navigation #'+widget).find('.eye').find('i').toggleClass('glyphicon-eye-close', !state[widget].visibility);
+		if(state[widget].visibility){
+			// Control UI in nav menu
+			$('#navigation #'+widget).find('.eye').addClass('label-success');
+			$('#navigation #'+widget).find('.eye').removeClass('label-default');
+			$('#navigation #'+widget).find('.eye').find('i').addClass('glyphicon-eye-open');
+			$('#navigation #'+widget).find('.eye').find('i').removeClass('glyphicon-eye-close');
+
+			// Control UI for buttons
+			$('body[id='+widget+']').find('.delete').attr('disabled', 'disabled');
+
+			// Make header red if widget is active
+			$('body[id='+widget+'] .header').addClass('active');
+
+			// Control show / hide buttons for further emphasis
+			$('body[id='+widget+'] button[href*="show"]').attr('disabled', 'disabled');
+			$('body[id='+widget+'] button[href*="hide"]').removeAttr('disabled');
+		} else {
+			// Control UI in nav menu
+			$('#navigation #'+widget).find('.eye').addClass('label-default');
+			$('#navigation #'+widget).find('.eye').removeClass('label-success');
+			$('#navigation #'+widget).find('.eye').find('i').addClass('glyphicon-eye-close');
+			$('#navigation #'+widget).find('.eye').find('i').removeClass('glyphicon-eye-open');
+
+			// Control UI for buttons
+			$('body[id='+widget+']').find('.delete').removeAttr('disabled');
+
+			// Make header red if widget is active
+			$('body[id='+widget+'] .header').removeClass('active');
+
+			// Control show / hide buttons for further emphasis
+			$('body[id='+widget+'] button[href*="hide"]').attr('disabled', 'disabled');
+			$('body[id='+widget+'] button[href*="show"]').removeAttr('disabled');
 		}
+		
 	}
+
+
 });
 
 $(document).ready(function(){
@@ -56,9 +86,10 @@ $(document).ready(function(){
 		if (window.confirm("Are you sure?")) {
 			var url = $(this).attr('href');
 			$.post(url, function(data){
-				$btn.parents('li').slideUp(function(){
-					this.remove();
-				});
+				location.reload();
+				// $btn.parents('li').slideUp(function(){
+				// 	this.remove();
+				// });
 				console.log(data);
 			});
 		}
