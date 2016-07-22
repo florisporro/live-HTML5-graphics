@@ -65,7 +65,6 @@ function cache_tweets(cb){
 exports.index = function(req, res) {
 	if (state.current.twitter.entries) {
 		cache_tweets(function(tweets){
-			console.log(tweets);
 			res.render('twitter', { title: 'Twitter', widget: 'twitter'});
 		});
 	} else {
