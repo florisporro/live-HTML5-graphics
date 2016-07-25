@@ -1,14 +1,10 @@
 "use strict"
-var socket = io('http://localhost:3000');
+window.socket = io('http://localhost:3000');
 
 var clock_offset = 0;
 var countdown_target = 0;
 
-socket.on('state', function (state) {
-	setTimeout(function(){
-		$('.widget').removeClass('hide');
-	}, 1000);
-
+window.socket.on('state', function (state) {
 	window.state = state;
 
 	console.log(state);
@@ -143,7 +139,7 @@ socket.on('state', function (state) {
 		}
 
 
-		// $('#'+widgets[i].name).toggleClass('hide', !state[widgets[i].name].visibility);
+		$('#'+widgets[i].name).toggleClass('hide', !state[widgets[i].name].visibility);
 
 		// General styling
 		$('#'+widgets[i].name).toggleClass('font-techy', (state.general.fonts === 'techy'));
@@ -168,7 +164,7 @@ socket.on('state', function (state) {
 	$('body').toggleClass('preview', (state.general.preview === 'true'));
 
 	// BROADCASTMESSAGE
-	if (state.broadcastMessage.visibility !== false) {
+	if (state.broadcastMessage.visibility !== (false || undefined)) {
 		if (state.broadcastMessage.entries[state.broadcastMessage.visibility] === undefined) {
 			console.log('BroadcastMessage hidden because message id does not exist. Deleted whilst showing?');
 			$('#'+widgets[i].name).text('');
@@ -178,12 +174,11 @@ socket.on('state', function (state) {
 	}
 
 	// LOWER THIRDS
-	if (state.lowerThirds.visibility !== false) {
+	if (state.lowerThirds.visibility !== (false || undefined)) {
 		if (state.lowerThirds.entries[state.lowerThirds.visibility] === undefined) {
 			console.log('lowerThirds hidden because message id does not exist. Deleted whilst showing?');
 			$('#'+widgets[i].name).text('');
 		} else {
-			console.log(state.lowerThirds.entries[state.lowerThirds.visibility].name);
 			$('#lowerThirds #name').text(state.lowerThirds.entries[state.lowerThirds.visibility].name);
 			$('#lowerThirds #function').text(state.lowerThirds.entries[state.lowerThirds.visibility].function);
 			$('#lowerThirds #company').text(state.lowerThirds.entries[state.lowerThirds.visibility].company);
@@ -191,7 +186,7 @@ socket.on('state', function (state) {
 	}
 
 	// TWITTER
-	if (state.twitter.visibility !== false) {
+	if (state.twitter.visibility !== (false || undefined)) {
 		$('#twitter img#author').attr('src', state.twitter.entries[state.twitter.visibility].img);
 		if (state.twitter.entries[state.twitter.visibility].media !== null) {
 			$('#twitter img#media_thumbnail').show();
@@ -203,6 +198,7 @@ socket.on('state', function (state) {
 		$('#twitter').addClass('hide');
 		$( "#twitter img" ).load(function() {
 			$('#twitter').removeClass('hide');
+			$('#twitter img#media_thumbnail').removeClass('hide');
 		});
 		$('#twitter p').html("&#8220;"+state.twitter.entries[state.twitter.visibility].message+"&#8221;");
 		$('#twitter #name').text(state.twitter.entries[state.twitter.visibility].name);

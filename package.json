@@ -21,8 +21,9 @@
     "windows-cpu": "^0.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "test": "mocha",
+    "start": "node ./bin/www",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -37,8 +38,10 @@
   "homepage": "https://github.com/florisporro/live-HTML5-graphics#readme",
   "devDependencies": {
     "chai": "3.5.0",
+    "debug": "~2.2.0",
     "mocha": "2.5.3",
+    "sinon": "^1.17.4",
     "superagent": "2.1.0",
-    "debug": "~2.2.0"
+    "zombie": "^4.2.1"
   }
 }

@@ -1,7 +1,8 @@
-"use strict"
+"use strict";
 var expect = require('chai').expect;
 var request = require('superagent');
 var state = require('../lib/state');
+
 var fs = require('fs');
 
 process.env.PORT = 8080;
@@ -13,38 +14,40 @@ describe('Admin panel', function(){
 	var baseUrl = 'http://localhost:'+process.env.PORT;
 	var widgets = ['general', 'casparCG', 'broadcastMessage', 'clock', 'countdown', 'logo', 'twitter', 'lowerThirds'];
 
-	describe('all control panel urls return status 200', function(){
-		for (let widget in widgets) {
-			it(widgets[widget] + ' should return status 200', function(done){
-				request.get(baseUrl + '/admin/' + widgets[widget]).end(function assert(err, res) {
-					expect(err).to.not.be.ok;
-					expect(res).to.have.property('status', 200);
-					// expect(res.text).to.equal('test');
-					done();
+	describe('all control panel urls should return status 200', function(){
+		context('data.json fully populated', function(){
+			for (let widget in widgets) {
+				it(widgets[widget] + ' should return status 200', function(done){
+					request.get(baseUrl + '/admin/' + widgets[widget]).end(function assert(err, res) {
+						expect(err).to.not.be.ok;
+						expect(res).to.have.property('status', 200);
+						// expect(res.text).to.equal('test');
+						done();
+					});
 				});
+			}
+		});
+		context('empty data.json file', function(){
+			var old_state = state.current;
+			before(function() {
+				fs.unlinkSync('data.json');
+				state.update();
 			});
-		}
-	});
 
-	describe('all control panel urls should return status 200 if no data.json file is present', function(){
-		var old_state = state.current;
-		before(function() {
-			fs.unlinkSync('data.json');
-		});
+			after(function() {
+				state.update(old_state);
+			});
 
-		after(function() {
-			state.update(old_state);
-		});
-
-		for (let widget in widgets) {
-			it(widgets[widget] + ' should return status 200', function(done){
-				request.get(baseUrl + '/admin/' + widgets[widget]).end(function assert(err, res) {
-					expect(err).to.not.be.ok;
-					expect(res).to.have.property('status', 200);
-					done();
+			for (let widget in widgets) {
+				it(widgets[widget] + ' should return status 200', function(done){
+					request.get(baseUrl + '/admin/' + widgets[widget]).end(function assert(err, res) {
+						expect(err).to.not.be.ok;
+						expect(res).to.have.property('status', 200);
+						done();
+					});
 				});
-			});
-		}
+			}
+		});
 	});
 
 	describe('should allow setting changes on all widgets', function(){
