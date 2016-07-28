@@ -15,6 +15,11 @@ window.socket.on('connect', function(){
 });
 
 window.socket.on('state', function (state) {
+	// Setup some defaults
+	if (state.general.animation_length === "" || undefined) {
+		state.general.animation_length = 1000;
+	}
+
 	window.state = state;
 
 	console.log(state);
@@ -47,14 +52,22 @@ window.socket.on('state', function (state) {
 		},
 		];
 
-	// for (var i in widgets2) {
-	// 	console.log(widgets2[i].name);
-	// }
+	function hideWidget(widget) {
+		setTimeout(function(){
+			$('#'+widget).addClass('hide');
+		}, state.general.animation_length + 500);
+	}
 
 	// Generic
 	for (var i in widgets) {
+
 		// Widget updating
 		if (!state[widgets[i].name].visibility) {
+			
+			// As a matter of fallback, we set the hide class on widgets that are meant to disappear in-case the animation doesn't work.
+			// This also helps us keep track of which widgets are active and which are not.
+			hideWidget(widgets[i].name);
+
 			switch(state.general.animations) {
 				case 'fades':
 					$('#'+widgets[i].name).velocity({ opacity: 0 }, { duration: state.general.animation_length });
@@ -122,9 +135,11 @@ window.socket.on('state', function (state) {
 				default:
 			}
 		} else {
+			$('#'+widgets[i].name).removeClass('hide');
+
 			switch(state.general.animations) {
 				case 'fades':
-					$('#'+widgets[i].name).velocity({ opacity: 1 }, { duration: 1000 });
+					$('#'+widgets[i].name).velocity({ opacity: 1 }, { duration: state.general.animation_length });
 					break;
 				case 'slides':
 					$('#'+widgets[i].name).velocity({
@@ -149,8 +164,6 @@ window.socket.on('state', function (state) {
 		}
 
 
-		$('#'+widgets[i].name).toggleClass('hide', !state[widgets[i].name].visibility);
-
 		// General styling
 		$('#'+widgets[i].name).toggleClass('font-techy', (state.general.fonts === 'techy'));
 		$('#'+widgets[i].name).toggleClass('font-modern', (state.general.fonts === 'modern'));
@@ -174,7 +187,7 @@ window.socket.on('state', function (state) {
 	$('body').toggleClass('preview', (state.general.preview === 'true'));
 
 	// BROADCASTMESSAGE
-	if (state.broadcastMessage.visibility !== (false || undefined)) {
+	if (state.broadcastMessage.visibility !== false) {
 		if (state.broadcastMessage.entries[state.broadcastMessage.visibility] === undefined) {
 			console.log('BroadcastMessage hidden because message id does not exist. Deleted whilst showing?');
 			$('#'+widgets[i].name).text('');
@@ -184,7 +197,7 @@ window.socket.on('state', function (state) {
 	}
 
 	// LOWER THIRDS
-	if (state.lowerThirds.visibility !== (false || undefined)) {
+	if (state.lowerThirds.visibility !== false) {
 		if (state.lowerThirds.entries[state.lowerThirds.visibility] === undefined) {
 			console.log('lowerThirds hidden because message id does not exist. Deleted whilst showing?');
 			$('#'+widgets[i].name).text('');
@@ -196,7 +209,7 @@ window.socket.on('state', function (state) {
 	}
 
 	// TWITTER
-	if (state.twitter.visibility !== (false || undefined)) {
+	if (state.twitter.visibility !== false) {
 		$('#twitter img#author').attr('src', state.twitter.entries[state.twitter.visibility].img);
 		if (state.twitter.entries[state.twitter.visibility].media !== null) {
 			$('#twitter img#media_thumbnail').show();
