@@ -1,8 +1,18 @@
 "use strict"
-window.socket = io('http://localhost:3000');
+// This bit is in case we are in automated testing mode, in that case we want to modify the port to what's set in the url parameters
+var params={};window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(str,key,value){params[key] = value;});
+if (params.port) {
+	window.socket = io('http://localhost:'+params.port);
+} else {
+	window.socket = io('http://localhost:3000');
+}
 
 var clock_offset = 0;
 var countdown_target = 0;
+
+window.socket.on('connect', function(){
+	console.log("Connected to server");
+});
 
 window.socket.on('state', function (state) {
 	window.state = state;

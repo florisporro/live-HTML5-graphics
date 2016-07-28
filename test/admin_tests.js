@@ -1,13 +1,14 @@
 "use strict";
 var expect = require('chai').expect;
 var request = require('superagent');
+
 var state = require('../lib/state');
 
 var fs = require('fs');
 
 process.env.PORT = 8080;
 process.env.NODE_ENV = 'test';
-var server = require('../bin/www');;
+var server = require('../bin/www');
 
 describe('Admin panel', function(){
 
