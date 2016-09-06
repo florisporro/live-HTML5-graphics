@@ -4,3 +4,4 @@ data.json
 live-HTML5-graphics.sublime-project
 live-HTML5-graphics.sublime-workspace
 coverage/
+*.ds_store

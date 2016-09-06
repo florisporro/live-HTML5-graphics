@@ -34,6 +34,12 @@ block widget
 			 	"false" : { "name" : "Off", "value" : "false" }
 			})
 
+		+select('general', 'style', 'Style', config.general.style,
+			{
+				"square" : { "name" : "Square", "value" : "square" },
+			 	"rounded" : { "name" : "Rounded", "value" : "rounded" }
+			})
+
 		+select('general', 'animations', 'Animations', config.general.animations,
 			{
 				"bouncy" : { "name" : "Bouncy", "value" : "bouncy" },
