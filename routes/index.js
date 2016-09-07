@@ -25,8 +25,15 @@ router.get('/admin', function(req, res) {
 
 // Serve the admin page with Jade
 router.get('/admin/general', function (req, res) {
-	res.locals.data = state.current;
-	res.render('general', { title: 'General' });
+	fs.readdir('./styles', function(err, files){
+		var styles = {};
+		for (var i = 0; i < files.length; ++i)
+			styles[files[i]] = { "name" : files[i], "value" : files[i] };
+
+		res.locals.styles = styles;
+		res.locals.data = state.current;
+		res.render('general', { title: 'General' });
+	});
 });
 
 router.get('/admin/casparCG', function (req, res) {

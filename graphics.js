@@ -14,11 +14,15 @@ window.socket.on('connect', function(){
 	console.log("Connected to server");
 });
 
+window.style = $('<link rel="stylesheet" type="text/css" href="">').appendTo('head');
+
 window.socket.on('state', function (state) {
 	// Setup some defaults
 	if (state.general.animation_length === "" || undefined) {
 		state.general.animation_length = 1000;
 	}
+
+	$("link[rel=stylesheet]").attr({href : './styles/'+state.general.style});
 
 	window.state = state;
 
@@ -168,8 +172,6 @@ window.socket.on('state', function (state) {
 		$('#'+widgets[i].name).toggleClass('font-techy', (state.general.fonts === 'techy'));
 		$('#'+widgets[i].name).toggleClass('font-modern', (state.general.fonts === 'modern'));
 		$('#'+widgets[i].name).toggleClass('font-classical', (state.general.fonts === 'classical'));
-		$('#'+widgets[i].name).toggleClass('style-rounded', (state.general.style === 'rounded'));
-		$('#'+widgets[i].name).toggleClass('style-square', (state.general.style === 'square'));
 		$('#'+widgets[i].name).toggleClass('shadowed', (state.general.shadows === 'true'));
 		$('#'+widgets[i].name).toggleClass('background-transparency', (state.general.transparent_elements === 'true'));
 		$('#'+widgets[i].name).toggleClass('background-solid', (state.general.transparent_elements === 'false'));
