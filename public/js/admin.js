@@ -29,6 +29,10 @@ socket.on('casparCG', function(casparCG) {
 	}
 });
 
+socket.on("versionmismatch", function(){
+	alert("Warning: renderer version mismatch");
+});
+
 socket.on('state', function(state) {
 	window.state = state;
 

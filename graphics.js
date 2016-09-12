@@ -12,6 +12,7 @@ var countdown_target = 0;
 
 window.socket.on('connect', function(){
 	console.log("Connected to server");
+	window.socket.emit('version', '1.0.1');
 });
 
 window.style = $('<link rel="stylesheet" type="text/css" href="">').appendTo('head');
