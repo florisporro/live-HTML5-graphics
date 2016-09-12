@@ -1,78 +1,3 @@
-/* BASIC SETUP */
-
-body, html {
-	width: 1920px;
-	height: 1080px;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	text-rendering: optimizeLegibility !important;
-	-webkit-font-smoothing: antialiased !important;
-	background: transparent;
-}
-body.preview {
-	background-image: url('../public/img/checkerboard.png');
-}
-
-/* FONTS */
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../public/fonts/Open_Sans/OpenSans-Regular.ttf');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../public/fonts/Open_Sans/OpenSans-Bold.ttf');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: url('../public/fonts/Open_Sans/OpenSans-ExtraBold.ttf');
-}
-
-/* GENERIC */
-
-.hide {
-	/* opacity: 0; */
-	/* display: none; */
-}
-
-.shadowed {
-	-webkit-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-	box-shadow: 3px 3px 18px -5px rgba(0,0,0,0.75);
-}
-.widget {
-	/* transition: opacity 1s; */
-}
-
-.animation-fades {
-	/* transition: opacity 3s; */
-}
-
-.background-transparency {
-	background: rgba(255, 255, 255, 0.5);
-}
-.background-solid {
-	background: rgba(255, 255, 255, 1);
-}
-
-.font-modern {
-	font-family: 'Open Sans';
-}
-.font-techy {
-	font-family: 'Open Sans';
-}
-.font-classical {
-	font-family: 'Open Sans';
-}
-
 .style-rounded {
 	border-radius: 20px;
 	border: 1px solid #FFFFFF;
@@ -136,16 +61,33 @@ body.preview {
 	left: 7%;
 	width: 40%;
 	padding: 45px 70px;
-	/* border-bottom: 12px solid #FFF; */
+	border-radius: 3px;
+	background: linear-gradient(to bottom, rgba(167,207,223,0.53) 0%,rgba(35,83,138,0.28) 100%);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.5), inset 0 1px 2px white;
+	color: #FFF;
 }
+
 #lowerThirds h1 {
 	margin: 0;
 	font-size: 48px;
+	text-shadow: 0 1px 0 #ccc,
+             0 2px 0 #c9c9c9,
+             0 3px 0 #bbb,
+             0 4px 0 #b9b9b9,
+             0 5px 0 #aaa,
+             0 6px 1px rgba(0,0,0,.1),
+             0 0 5px rgba(0,0,0,.1),
+             0 1px 3px rgba(0,0,0,.3),
+             0 3px 5px rgba(0,0,0,.2),
+             0 5px 10px rgba(0,0,0,.25),
+             0 10px 10px rgba(0,0,0,.2),
+             0 20px 20px rgba(0,0,0,.15);
 }
 #lowerThirds p {
 	font-weight: 400;
 	font-size: 28px;
 	margin: 0;
+	text-shadow: 0px 1px 0px #BBB, 0px 3px 3px #444;
 }
 #lowerThirds #function {
 	font-weight: 600;
@@ -162,9 +104,23 @@ body.preview {
 	text-align: center;
 	font-family: 'Open Sans';
 	font-weight: 800;
-	font-size: 3em;
+	font-size: 6em;
 	width: 100%;
 	padding: 1em 0;
+	background: transparent;
+	color: #FFF;
+	text-shadow: 0 1px 0 #ccc,
+	             0 2px 0 #c9c9c9,
+	             0 3px 0 #bbb,
+	             0 4px 0 #b9b9b9,
+	             0 5px 0 #aaa,
+	             0 6px 1px rgba(0,0,0,.1),
+	             0 0 5px rgba(0,0,0,.1),
+	             0 1px 3px rgba(0,0,0,.3),
+	             0 3px 5px rgba(0,0,0,.2),
+	             0 5px 10px rgba(0,0,0,.25),
+	             0 10px 10px rgba(0,0,0,.2),
+	             0 20px 20px rgba(0,0,0,.15);
 }
 
 #twitter {
