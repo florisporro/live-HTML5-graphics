@@ -69,6 +69,14 @@ block widget
 
 		hr
 
+		fieldset(name="device")
+			label.control-label Device &amp; Framerate
+			select.form-control(name="device")
+				option(value='DECKLINK DEVICE 1', selected=(config.casparCG.device=='DECKLINK DEVICE 1')) DECKLINK DEVICE 1
+				option(value='DECKLINK DEVICE 2', selected=(config.casparCG.device=='DECKLINK DEVICE 2')) DECKLINK DEVICE 2
+				option(value='DECKLINK DEVICE 3', selected=(config.casparCG.device=='DECKLINK DEVICE 3')) DECKLINK DEVICE 3
+				option(value='DECKLINK DEVICE 4', selected=(config.casparCG.device=='DECKLINK DEVICE 4')) DECKLINK DEVICE 4
+
 		fieldset(name="resolution")
 			label.control-label Resolution &amp; Framerate
 			select.form-control(name="resolution")
