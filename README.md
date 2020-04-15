@@ -1,3 +1,5 @@
+This project was started 4 years ago as a way to add simple graphics to livestreams. It has since grown into the full-on commercial project [Holographics](https://hologfx.io).
+
 # HTML5 Graphics dynamic template for broadcast
 
 This graphics renderer template utilizes a combination of javascript, HTML5 and a NodeJS server to offer the foundations for a dynamic, interactive graphics system for small broadcasts.
